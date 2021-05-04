@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Button shortcode style - begin
+   ========================================================================== */
+
+.edge-btn {
+    @include edgeButtonDefaultStyle();
+    @include edgeButtonMediumParams();
+    cursor: pointer;
+    
+    &.edge-btn-simple {
+        padding: 0 !important;
+        color: #000;
+        background-color: transparent;
+        border: 0;
+        vertical-align: middle;
+        line-height: 26px;
+
+        .edge-btn-text {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        &.edge-btn-custom-hover-color:hover {
+            .edge-btn-text:after {
+                width: 100%;
+                background-color: currentColor;
+            }
+        }
+
+        &:not(.edge-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $first-main-color !important;
+        }
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.edge-btn-lined {
+        .edge-btn-text {
+            &:before {
+                content:"";
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: currentColor;
+                transform-origin:right;
+                @include edgeTransitionTransform(.3s ease);
+            }
+
+            &:after {
+                background-color: currentColor;
+                @include edgeTransition(width .3s ease .3s);
+            }
+        }
+
+        &:hover {
+            .edge-btn-text {
+                &:before { 
+                    @include edgeTransform(scale(0,1));
+                }
+            }
+        }
+    }
+
+    &.edge-btn-solid {
+        @include edgeButtonSolidColor();
+
+        &:not(.edge-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.edge-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.edge-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+
+    &.edge-btn-outline {
+	    @include edgeButtonOutlineColor();
+
+        &:not(.edge-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.edge-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $default-dark-color !important;
+        }
+
+        &:not(.edge-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $default-dark-color !important;
+        }
+    }
+
+    &.edge-btn-small {
+        @include edgeButtonSmallParams();
+    }
+
+    &.edge-btn-medium {
+        @include edgeButtonMediumParams();
+    }
+
+    &.edge-btn-large {
+        @include edgeButtonLargeParams();
+    }
+
+    &.edge-btn-huge {
+        @include edgeButtonHugeParams();
+    }
+
+    &.edge-btn-icon {
+
+        > i,
+        > span:not(.edge-btn-text) {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 0 7px;
+            font-size: 15px;
+            line-height: inherit;
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+    }
+
+    /*arrow animation adj. start*/
+    &.edge-btn-icon {
+
+        > i {
+            @include edgeTransitionTransform(0.2s $default-easing);
+        }
+
+        &:hover {
+
+            > i {
+                @include edgeTransform(translate3d(3px,0,0));
+            }
+        }
+    }
+    /*arrow animation adj. end*/
+}
+/* ==========================================================================
+   Button shortcode style - end
+   ========================================================================== */

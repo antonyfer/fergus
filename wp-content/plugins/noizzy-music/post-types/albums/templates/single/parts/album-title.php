@@ -1,0 +1,1 @@
+<h3 class="edge-album-single-title"> <?php the_title(); ?> </h3>

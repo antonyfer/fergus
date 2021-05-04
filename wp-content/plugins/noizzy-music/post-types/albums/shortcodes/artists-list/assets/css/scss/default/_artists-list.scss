@@ -1,0 +1,341 @@
+/* ==========================================================================
+# Artists list - begin
+	========================================================================== */
+html.qodef-expander-disable-scroll {
+    overflow-y: hidden !important;
+    position: fixed;
+    width: 100%;
+}
+
+.edge-artists-list {
+    position: relative;
+
+    &.edge-text {
+
+        .edge-artists-text {
+            display: inline-block;
+            color: $light-skin-color;
+            text-transform: uppercase;
+            margin: 5px 0;
+
+            &:after {
+                content: ":";
+            }
+        }
+
+        .edge-artist {
+            display: inline !important;;
+            vertical-align: top;
+            width: auto !important;
+            float: none !important;
+            word-wrap: break-word;
+            word-break: break-word;
+
+            .edge-artist-name {
+                display: inline;
+
+                &:after {
+                    content: "/";
+                }
+            }
+
+            &:last-child {
+
+                .edge-artist-name {
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .edge-artist-inner {
+
+        &:hover {
+            .edge-artist-social-holder {
+                opacity: 1;
+
+                .edge-artist-social-wrapp {
+                    @include edgeTransitionTransform(.45s $default-easing-img);
+                    @include edgeTransform(translate3d(0,0,0) translateY(-50%));
+                }
+            }
+
+            .edge-artist-image {
+
+                img {
+                    @include edgeTransitionTransform(.45s $default-easing-img);
+                    @include edgeTransform(scale(1.07));
+                }
+            }
+        }
+
+        .edge-artist-title-holder {
+            background: transparent;
+
+            .edge-artist-name {
+                margin: 9px 0 5px;
+                color: #000;
+            }
+
+            span {
+                color: #000;
+            }
+        }
+    }
+
+    .edge-artist-image {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 1px 9px 0 rgba(#000, 0.17);
+
+        img {
+            display: block;
+            @include edgeTransitionTransform(.2s ease);
+        }
+
+        .edge-artist-social-holder {
+            @include edgeAbsoluteHolderLayout;
+            background: rgba($default-heading-color, .44);
+            opacity: 0;
+            @include edgeTransition(opacity 0.25s);
+
+            .edge-artist-social-wrapp {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                color: #fff;
+                text-align: center;
+                @include edgeTransitionTransform(.25s ease);
+                @include edgeTransform(translate3d(0,40px,0) translateY(-50%));
+
+                .edge-artists-soc-title {
+                    margin-top: 0;
+                    color: inherit;
+                }
+
+                a {
+                    display: inline-block;
+                    color: inherit;
+                    font-size: 24px;
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    .edge-artist {
+        box-sizing: border-box;
+    }
+
+    &:not(.edge-one-column) {
+
+        .edge-artist {
+            float: left;
+        }
+    }
+
+    $columns_number: ('2', '3', '4', '5');
+
+    @for $i from 0 to length($columns_number) {
+        &.edge-#{nth($columns_number,$i+1)}-columns {
+
+            .edge-artist {
+                width: 100% / ($i+2);
+            }
+
+            @if ($i > 1) { // set different break point for four and five columns
+                @media only screen and (min-width: $laptop-landscape-medium-plus-pixel) {
+
+                    .edge-artist {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            } @else {
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    .edge-artist {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    $space_label: ('no', 'tiny', 'small', 'normal', 'medium', 'large', 'huge' );
+    $space_width: (0, 5, 10, 15, 20, 25, 35);
+
+    @for $i from 0 to length($space_label) {
+        &.edge-#{nth($space_label,$i+1)}-space {
+            $column_width: nth($space_width, $i+1);
+
+            margin: 0 -#{$column_width}px;
+
+            .edge-artist {
+                padding: 0 #{$column_width}px;
+            }
+        }
+    }
+}
+
+
+.edge-artist-single-expander {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: calc(100vmax * 1.4142);
+    height: calc(100vmax * 1.4142);
+    margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
+    opacity: 0;
+    border-radius: 50%;
+    background: #f4f4f4;
+    @include edgeTransform(scale(0.001));
+    z-index: 100;
+    pointer-events: none;
+
+    &.active{
+        pointer-events: auto;
+    }
+}
+
+.edge-artist-view-single {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 140vmin;
+    height: 78vmin;
+    margin: -39vmin 0 0 -70vmin;
+    z-index: 100;
+    pointer-events: none;
+
+    .edge-artist-popup-data {
+        position: relative;
+        top: 50%;
+        left: 0;
+        @include edgeTransform(translateY(-50%));
+    }
+
+
+    &.edge-view-current {
+        pointer-events: auto;
+
+        .edge-controls {
+            opacity: 1;
+        }
+    }
+
+    .edge-grid-row,
+    .edge-image-wrap {
+        height: 100%;
+    }
+
+    .edge-atrist-single{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        min-height: 0;
+        opacity: 0;
+
+        &.edge-single-current {
+            opacity: 1;
+        }
+
+        .edge-atrist-image-holder {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            .edge-atrist-image {
+                max-width: calc(100% - 93px);
+                height: 100%;
+                box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.3);
+
+                @include ipad-landscape {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .edge-artist-title-holder {
+            background: transparent;
+            padding: 0;
+
+            .edge-artist-name {
+                color: #000;
+            }
+        }
+
+        .edge-artist-desc {
+            margin: 15px 0 30px;
+        }
+
+        .edge-number,
+        .edge-name,
+        .edge-stage {
+            z-index: 2;
+            position: absolute;
+        }
+    }
+
+    .edge-controls {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        .edge-controls-navigate {
+            position: absolute;
+            bottom: 0;
+            left: calc(100% + 1vmin);
+        }
+
+        .edge-control-button-next,
+        .edge-control-button-prev {
+            position: fixed;
+            top: 50%;
+            font-size: 5.5vmin;
+            color: $first-main-color;
+            @include edgeTransform(translateY(-50%))
+        }
+    }
+
+    .edge-control-button-next {
+        right: 50px;
+    }
+
+    .edge-control-button-prev {
+        left: 50px;
+    }
+
+    .edge-control-button {
+        padding: 0;
+        border: 0;
+        background: none;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .edge-control-button-back {
+        font-size: 5.5vmin;
+        position: fixed;
+        top: 39px;
+        right: 50px;
+        color: $first-main-color;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+    }
+}
+
+/* ==========================================================================
+# Team list - end
+========================================================================== */

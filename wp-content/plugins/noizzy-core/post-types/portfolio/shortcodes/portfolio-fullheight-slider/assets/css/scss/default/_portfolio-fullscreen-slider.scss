@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Portfolio Fullscreen Slider shortcode style - begin
+   ========================================================================== */
+
+.edge-portfolio-fullheight-slider-holder {
+    height: 100vh;
+
+    .edge-portfolio-list-holder,
+    .edge-pl-inner,
+    .owl-stage-outer,
+    .owl-stage,
+    .owl-item,
+    .edge-pl-item,
+    .edge-pl-item-inner{
+        height: 100%;
+    }
+
+    .edge-pl-item{
+        width: 100% !important;
+
+        .edge-pli-text-holder{
+            position: absolute;
+            bottom: 50px;
+            left: 0px;
+            padding: 0 11% 0 8%;
+
+            .edge-pli-category,
+            .edge-pli-title,
+            .edge-pli-excerpt,
+            .edge-pli-read-more .edge-btn{
+                color: #fff;
+            }
+        }
+
+        .edge-pli-read-more{
+            position: relative;
+            z-index: 10;
+            margin-top: 30px;
+        }
+    }
+
+    .edge-pli-image-holder{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+}
+/* ==========================================================================
+   Portfolio Fullscreen Slider shortcode style - end
+   ========================================================================== */

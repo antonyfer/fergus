@@ -1,0 +1,4 @@
+2021-04-30T09:52:57+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in G:\xampp\htdocs\noizzy\wp-content\themes\noizzy\framework\modules\header\types\header-vertical\after-load.php on line 3
+
+2021-04-30T10:17:45+00:00 CRITICAL Out of memory (allocated 69206016) (tried to allocate 20480 bytes) in G:\xampp\htdocs\noizzy\wp-content\plugins\woocommerce\includes\admin\class-wc-admin.php on line 51
+

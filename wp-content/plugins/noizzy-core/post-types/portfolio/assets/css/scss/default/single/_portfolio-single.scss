@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.single-portfolio-item {
+    .edge-content .edge-content-inner>.edge-container>.edge-container-inner,
+    .edge-content .edge-content-inner>.edge-full-width>.edge-full-width-inner{
+        padding-bottom: 0;
+
+    }
+
+	.edge-ps-like{
+		margin-top: 28px;
+
+		i{
+			font-size: 20px;
+			margin-right: 5px;
+		}
+
+		span{
+			font-size: 22px;
+			font-style: italic;
+		}
+	}
+
+	.edge-owl-slider .owl-nav {
+
+		.owl-next,
+		.owl-prev {
+			color: #fff;
+		}
+	}
+}
+
+.edge-portfolio-single-holder {
+	@include edgeRelativeHolderLayout();
+	margin: 0 0 50px;
+
+	.edge-ps-title-wrapper {
+		margin-bottom: 63px;
+		margin-top: 94px;
+	}
+	
+    .edge-ps-image-holder {
+	    @include edgeRelativeHolderLayout();
+	    
+	    .edge-ps-image {
+		    @include edgeRelativeHolderLayout();
+		    box-sizing: border-box;
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+
+	.edge-ps-info-holder-right {
+		@include edgeRelativeHolderLayout();
+	}
+	
+	.edge-ps-info-holder {
+		@include edgeRelativeHolderLayout();
+		
+		.edge-ps-info-item {
+			@include edgeRelativeHolderLayout();
+			margin: 0 0 2px;
+			
+			p, a {
+				margin: 0;
+				display: inline-block;
+			}
+
+			&.edge-ps-social-share {
+				margin-top:74px;
+
+				.edge-social-title {
+					font-family: $default-heading-font;
+					font-size: 30px;
+					text-transform: uppercase;
+					color: $default-heading-color;
+					font-weight: 700;
+					display: block;
+					margin-bottom: 22px;
+				}
+
+				.edge-social-share-holder.edge-list li{
+					margin-right: 22px;
+				}
+
+				.edge-share-link{
+					font-size: 18px;
+					color: $default-text-color;
+				}
+			}
+
+			&.edge-ps-tags,
+			&.edge-ps-categories,
+			&.edge-ps-custom-field {
+				a {
+					font-weight: 400;
+				}
+			}
+
+			&.edge-ps-like {
+				margin: 0 0 22px;
+			}
+		}
+
+
+		
+		.edge-ps-info-title {
+			margin: 0 5px 0 0;
+			display: inline-block;
+			font-weight: 700;
+		}
+	}
+
+	.edge-comment-form {
+		.edge-comment-form-inner{
+			padding: 0;
+		}
+
+		.comment-reply-title{
+			margin: 35px 0 15px 0;
+		}
+	}
+
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.edge-portfolio-single-holder {
+	
+	.edge-ps-image-holder {
+		
+		&.edge-ps-gallery-images {
+			
+			/***** Columns Layout - begin *****/
+			
+			$columns_number: ('two', 'three', 'four');
+			
+			@for $i from 0 to length($columns_number) {
+				&.edge-ps-#{nth($columns_number,$i+1)}-columns {
+					
+					.edge-ps-image {
+						width: 100% / ($i+2);
+					}
+					
+					@if ($i > 1) { // set different break point for four columns
+						@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+							
+							.edge-ps-image {
+								
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					} @else {
+						@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+							
+							.edge-ps-image {
+								
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			/***** Columns Layout - end *****/
+		}
+		
+		&.edge-ps-masonry-images {
+			
+			.edge-ps-image,
+			.edge-ps-grid-sizer {
+				width: 25%;
+			}
+			
+			.edge-ps-grid-gutter {
+				width: 0;
+			}
+			
+			.edge-masonry-size-large-width {
+				
+				img {
+					width: 100%;
+				}
+			}
+			
+			/***** Columns Layout - begin *****/
+			
+			$columns_number: ('two', 'three', 'four');
+			
+			@for $i from 0 to length($columns_number) {
+				&.edge-ps-#{nth($columns_number,$i+1)}-columns {
+					$column_width: 100%/($i+2);
+					
+					.edge-ps-image,
+					.edge-ps-grid-sizer {
+						width: $column_width;
+					}
+					
+					.edge-ps-image.edge-masonry-size-large-width,
+					.edge-ps-image.edge-masonry-size-large-width-height {
+						width: $column_width * 2;
+					}
+				}
+			}
+			
+			/***** Columns Layout - end *****/
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */
+
+/*Navigation*/
+.edge-portfolio-nav {
+	padding: 40px 0;
+	margin-top: 99px;
+	margin-bottom: 0;
+
+	.edge-portfolio-prev, .edge-portfolio-next {
+		max-width: 50%;
+	}
+
+	.edge-portfolio-prev {
+		float: left;
+
+		span {
+			margin-right: 7px;
+		}
+	}
+
+	.edge-portfolio-next {
+		float: right;
+
+		span {
+			margin-left: 7px;
+		}
+	}
+
+	.edge-portfolio-prev,
+	.edge-portfolio-next {
+		position: relative;
+		color: $default-dark-color;
+		font-family: $default-heading-font;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		span {
+			font-size: 18px;
+		}
+	}
+
+	a {
+		color: #000;
+
+		span {
+
+		}
+
+		&:hover {
+			color: rgba(#000,.7);
+		}
+	}
+
+	.edge-portfolio-back-btn {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include edgeTransform( translate(-50%, -50%) );
+
+		a {
+			display: flex;
+			flex-wrap: wrap;
+			width: 34px;
+			height: 27px;
+			color: #000;
+
+			span {
+				width: 9px;
+				height: 9px;
+				margin: 2px;
+				background-color: #000;
+			}
+
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Album Player Responsive styles - begin
+   ========================================================================== */
+   @include laptop-landscape-large {
+        .edge-audio-player-holder {
+            .edge-audio-player-volume-holder {
+                width: 20%;
+            }
+
+            .edge-audio-player-details-holder {
+                width: 20%;
+            }
+        }
+   }
+
+    @include laptop-landscape-mac {
+
+      .edge-audio-player-holder.edge-audio-player-standard {
+        .edge-audio-player-details-holder {
+          padding-top: 6px;
+        }
+      }
+    }
+
+  @include ipad-landscape {
+    .edge-audio-player-holder.edge-audio-player-standard .edge-audio-player-volume-holder {
+      width: 3%;
+    }
+  }
+
+   @include ipad-portrait {
+        .edge-audio-player-holder {
+            .edge-audio-player-time-holder {
+                display: none;
+            }
+            .edge-audio-player-details-holder,
+            .edge-audio-player-controls-holder {
+                width: 40%;
+            }
+            .edge-audio-player-controls-holder,
+            .edge-audio-player-volume-holder {
+                text-align: right;
+            }
+            .edge-audio-player-controls-holder li {
+                width: 33%;
+
+              a {
+                padding: 0 10px;
+              }
+            }
+        }
+
+       .edge-audio-player-holder.edge-audio-player-standard .edge-audio-player-volume-holder {
+         width: 15%;
+       }
+
+        .edge-audio-player-holder.edge-audio-player-with-images {
+          .edge-audio-player-tracks-images-holder {
+            .tracks-list {
+              li{
+                a:after {
+                  width: 47px;
+                  height: 47px;
+                }
+                a:before {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+
+     .edge-audio-player-holder.edge-audio-player-standard .edge-audio-player-details-holder {
+       width: 19%;
+     }
+   }
+
+   @include phone-portrait {
+
+     .edge-audio-player-holder {
+
+       .edge-audio-player-details-holder,
+       .edge-audio-player-controls-holder {
+         width: 40%;
+       }
+
+       .edge-audio-player-volume-holder {
+         display: none;
+       }
+       .edge-audio-player-controls-holder li {
+         width: 33%;
+       }
+     }
+
+     .edge-audio-player-holder.edge-audio-player-with-images {
+        .edge-audio-player-tracks-images-holder {
+          display: none;
+        }
+      }
+
+      .edge-audio-player-wrapper  {
+        margin-top: 0!important;
+      }
+
+     .edge-audio-player-holder.edge-audio-player-standard {
+       .edge-audio-player-details-holder {
+         padding-top: 0;
+       }
+     }
+   }
+
+/* ==========================================================================
+   Album Player Responsive styles - end
+   ========================================================================== */

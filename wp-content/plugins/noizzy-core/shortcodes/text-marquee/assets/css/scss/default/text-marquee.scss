@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Text Marquee shortcode style - begin
+   ========================================================================== */
+
+.edge-text-marquee {
+	position: relative;
+	white-space: nowrap;
+	color: #f1f1f1;
+	font-family: $default-heading-font;
+	font-weight: 700;
+	font-size: 222px;
+	line-height: 1.2em;
+	overflow: hidden;
+
+	.edge-marquee-element {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 25px;
+		box-sizing: border-box;
+
+		&.edge-aux-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Text Marquee shortcode style - end
+   ========================================================================== */

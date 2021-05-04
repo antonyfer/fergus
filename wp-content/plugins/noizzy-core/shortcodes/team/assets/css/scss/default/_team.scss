@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Team shortcode style - begin
+   ========================================================================== */
+
+.edge-team-holder {
+    @include edgeRelativeHolderLayout();
+
+	/*info on image start*/
+	&.edge-team-info-on-image {
+
+		.edge-icon-shortcode {
+			> a {
+				color: #fff;
+			}
+		}
+
+		.edge-team-image {
+			img {
+				@include edgeTransitionTransform(.2s ease);
+			}
+		}
+		
+		.touch & {
+			cursor: pointer;
+		}
+
+		&:hover {
+
+			.edge-team-image {
+				img {
+					@include edgeTransitionTransform(.45s $default-easing-img);
+					@include edgeTransform(scale(1.07));
+				}
+			}
+
+			.edge-team-social-outer {
+				opacity: 1;
+			}
+
+			.edge-team-social-inner {
+				@include edgeTransitionTransform(.45s $default-easing-img);
+				@include edgeTransform(translate3d(0,0,0));
+			}
+		}
+		
+		.edge-team-social-holder {
+			margin: 7px 0 0;
+		}
+
+		.edge-team-name {
+			color: #fff;
+		}
+
+		.edge-team-position {
+			color: #fff;
+		}
+	}
+	/*info on image end*/
+
+	/*info below image start*/
+	&.edge-team-info-below-image {
+
+		.edge-team-inner {
+
+			.edge-team-image {
+
+				img {
+					@include edgeTransitionTransform(.2s ease);
+				}
+
+				&:after {
+					content:'';
+					@include edgeAbsoluteHolderLayout;
+					background: rgba($default-heading-color, .44);
+					opacity: 0;
+					@include edgeTransition(opacity 0.25s);
+				}
+			}
+
+			&:hover {
+				.edge-team-image {
+
+					img {
+						@include edgeTransitionTransform(.45s $default-easing-img);
+						@include edgeTransform(scale(1.07));
+					}
+
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	/*info below image end*/
+
+    .edge-team-image {
+		overflow: hidden;
+        @include edgeRelativeHolderLayout();
+
+        img {
+            display: block;
+        }
+    }
+	
+	.edge-team-info {
+		@include edgeRelativeHolderLayout();
+		margin: 13px 0 0;
+	}
+
+    .edge-team-name {
+        margin: 0;
+    }
+
+    .edge-team-position {
+        margin: 0;
+    }
+	
+	.edge-team-text {
+		margin: 10px 0 0;
+		color: #fff;
+	}
+	
+	.edge-team-social-wrapper {
+		@include edgeAbsoluteHolderLayout();
+		z-index: 1;
+
+		&:after {
+			content:"";
+			opacity:0.55;
+			@include edgeAbsoluteHolderLayout();
+		}
+	}
+	
+	.edge-team-social-outer {
+		@include edgeTableLayout();
+		background: rgba($default-heading-color, .44);
+		opacity: 0;
+		@include edgeTransition(opacity 0.25s);
+	}
+	
+	.edge-team-social-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		vertical-align: middle;
+		z-index:20;
+		@include edgeTransitionTransform(.25s ease);
+		@include edgeTransform(translate3d(0,40px,0));
+	}
+	
+	.edge-team-social-holder {
+		@include edgeRelativeHolderLayout();
+		margin: 17px 0 0;
+		
+		.edge-team-icon {
+			font-size: 24px;
+			margin: 0 12px;
+			
+			.edge-icon-element {
+				font-size: inherit;
+				@include edgeTransition(none);
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Team shortcode style - end
+   ========================================================================== */

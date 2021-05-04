@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Albums shortcode styles - begin
+   ========================================================================== */
+
+.edge-albums-list-holder-outer {
+
+    &.edge-alb-standard-with-space,
+    &.edge-alb-gallery-with-space {
+        margin: 0 -35px;
+    }
+
+    &.edge-alb-two-columns{
+        .edge-album {
+            width: 50%;
+            padding: 35px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .edge-album:nth-child(2n+1) {
+            clear: both;
+        }
+
+        .edge-albums-list-holder {
+
+        }
+
+        .edge-album-inner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        &.edge-album-wide{
+            .edge-album {
+                padding: 0;
+            }
+
+            .edge-albums-list-holder {
+                margin: 0;
+            }
+        }
+    }
+
+
+    &.edge-alb-three-columns{
+        .edge-album {
+            width: 33.33%;
+            padding: 35px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .edge-album:nth-child(3n+1) {
+            clear: both;
+        }
+
+        .edge-albums-list-holder {
+
+        }
+
+        .edge-album-inner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        &.edge-album-wide{
+            .edge-album {
+                padding: 0;
+            }
+
+            .edge-albums-list-holder {
+                margin: 0;
+            }
+        }
+    }
+
+    &.edge-alb-four-columns{
+        .edge-album {
+            width: 25%;
+            padding: 35px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .edge-album:nth-child(4n+1) {
+            clear: both;
+        }
+
+        .edge-albums-list-holder {
+
+        }
+
+        .edge-album-inner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        &.edge-album-wide{
+            .edge-album {
+                padding: 0;
+            }
+
+            .edge-albums-list-holder {
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+
+.edge-albums-list-holder {
+    height: 100%;
+
+    .edge-album {
+        position:relative;
+        margin: 0;
+        vertical-align: top;
+
+        &.edge-large-width {
+            width: 50%;
+
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        .edge-album-image-holder {
+            position: relative;
+            overflow: hidden;
+
+            a{
+                display: block;
+            }
+            img,
+            a img{
+                vertical-align: top;
+                height: auto;
+                max-width: 101%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            img {
+                @include edgeTransitionTransform(.2s ease);
+            }
+        }
+
+        .edge-event-button {
+            display: inline-block;
+            margin: 12px 0 0;
+            font-family: $default-heading-font;
+            color: #fff;
+            text-transform: uppercase;
+
+            span, i {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            i {
+                margin-left: 7px;
+            }
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .edge-album-buttons {
+            text-align: center;
+            padding-top: 37px;
+
+            a {
+                margin: 0 9px;
+            }
+        }
+
+        &:hover {
+            .edge-album-image-holder {
+
+                img {
+                    @include edgeTransitionTransform(.45s $default-easing-img);
+                    @include edgeTransform(scale(1.07));
+                }
+            }
+        }
+    }
+}
+
+.edge-albums-list-holder-outer.edge-alb-standard{
+    .edge-album {
+        .edge-album-text-holder .edge-album-title{
+            margin: 22px 0 0;
+            text-transform: uppercase;
+        }
+
+        a {
+            position:relative;
+
+            &:hover {
+                color:#130a02;
+            }
+        }
+
+        .edge-alb-artists {
+            color: #000;
+        }
+
+        .edge-album-image-holder {
+            position: relative;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 22px 2px rgba(0,0,0,.2);
+            box-shadow: 0 0 22px 2px rgba(0,0,0,.2);
+
+            img {
+                @include edgeTransitionTransform(.2s ease);
+            }
+
+            &:hover {
+
+                img {
+                    @include edgeTransitionTransform(.45s $default-easing-img);
+                    @include edgeTransform(scale(1.07));
+                }
+
+                a.edge-album-image-link {
+                    &:after {
+                        opacity:1;
+                    }
+                }
+
+                .edge-btn {
+                    color: #fff !important;
+                    @include edgeTransform(none);
+                }
+            }
+
+            a.edge-album-image-link {
+                &:after {
+                    content:'';
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    height:100%;
+                    width:100%;
+                    opacity:0;
+                    background-color: rgba($default-heading-color, 0.59);
+                    @include edgeTransition(opacity .2s ease-in-out);
+                }
+            }
+
+            .edge-btn {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 11px !important; /* important to override important style */
+                background: #000;
+                color: #fff;
+                text-align: center;
+                @include edgeTransform(translateY(100%));
+                @include edgeTransition(transform 0.3s, background 0.3s);
+
+                &.edge-btn-icon>i {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .edge-alb-artists-holder {
+            margin-top: 1px;
+        }
+    }
+}
+
+.edge-albums-list-holder-outer.edge-alb-gallery {
+    .edge-album {
+
+        .edge-album-inner {
+            -webkit-box-shadow: 0 0 22px 2px rgba(0,0,0,.2);
+            box-shadow: 0 0 22px 2px rgba(0,0,0,.2);
+        }
+
+        .edge-item-image-holder{
+            overflow: hidden;
+        }
+
+        .edge-album-title{
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .edge-album-link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .edge-album-text-overlay {
+            position: absolute;
+            width: 101%;
+            height: 101%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            @include edgeTransition(opacity 0.2s ease);
+        }
+
+        .edge-album-text-overlay-inner{
+            @include  edgeTableLayout;
+            overflow: hidden;
+
+            &:after {
+                content:"";
+                @include edgeAbsoluteHolderLayout();
+                background: rgba(0,0,0,0.59);
+            }
+        }
+
+        .edge-album-text-holder{
+            @include edgeTableCellLayout;
+            opacity: 0;
+            @include edgeTransition(opacity .45s ease);
+            vertical-align: middle;
+            text-align: center;
+            z-index:10;
+            pointer-events:none;
+            padding: 0 30px;
+            @include edgeTransitionTransform(.25s ease);
+            @include edgeTransition(opacity 0.25s, transform 0.25s);
+            @include edgeTransform(translate3d(0,40px,0));
+        }
+
+        &:hover{
+            .edge-album-text-overlay{
+                opacity: 1;
+            }
+            .edge-album-text-holder{
+                opacity: 1;
+                @include edgeTransitionTransform(.45s $default-easing-img);
+                @include edgeTransform(translate3d(0,0,0));
+            }
+        }
+
+        .edge-alb-artists-holder{
+            .edge-alb-artists {
+                color: #fff;
+            }
+        }
+    }
+}
+.edge-albums-list-holder-outer .edge-albums-list-paging{
+    text-align: center;
+    margin: 35px 0 0 0;
+}
+
+/* ==========================================================================
+   Albums styles - end
+   ========================================================================== */

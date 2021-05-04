@@ -1,0 +1,51 @@
+.edge-team-single-holder {
+    @include edgeRelativeHolderLayout();
+	
+    .edge-name {
+        margin: 0 0 20px;
+    }
+
+    .edge-position {
+	    margin: 0;
+        color: #ababab;
+
+        .edge-icon-shortcode {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            a, span, i {
+                color: #999;
+            }
+        }
+    }
+
+    .edge-ts-info-row {
+	    padding: 10px 0;
+	    border-bottom: 1px solid #dadada;
+	    color: #ababab;
+	    font-size: 12px;
+
+        &:last-child{
+            border: 0;
+        }
+
+        .edge-ts-bio-icon {
+	        display: inline-block;
+	        vertical-align: middle;
+	        margin: 0 10px 0 0;
+	        font-size: 18px;
+        }
+
+        .edge-ts-bio-info {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .edge-team-single-content {
+	    @include edgeRelativeHolderLayout();
+	    margin: 30px 0 0;
+    }
+}

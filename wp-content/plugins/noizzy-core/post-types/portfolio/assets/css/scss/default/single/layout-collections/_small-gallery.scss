@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Portfolio Single - Small Gallery layout style - begin
+   ========================================================================== */
+
+.edge-portfolio-single-holder {
+    
+    &.edge-ps-small-gallery-layout {
+    
+        .edge-ps-image-holder {
+            width: 100%;
+
+            .edge-ps-image {
+                float: left;
+
+                a {
+                    @include edgeImageOverlayHoverStyle();
+                }
+            }
+        }
+    
+        .edge-ps-content-item {
+            margin: 0 0 19px;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Small Gallery layout style - end
+   ========================================================================== */

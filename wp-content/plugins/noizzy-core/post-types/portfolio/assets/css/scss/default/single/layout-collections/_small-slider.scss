@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Portfolio Single - Small Slider layout style - begin
+   ========================================================================== */
+
+.edge-portfolio-single-holder {
+	
+	&.edge-ps-small-slider-layout {
+		
+		.edge-ps-image-holder {
+			
+			.edge-ps-image-inner {
+				visibility: hidden;
+			}
+			
+			.edge-ps-image {
+				
+				img {
+					width: 100%;
+				}
+			}
+		}
+		
+		.edge-ps-content-item {
+			margin: 0 0 19px;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single - Small Slider layout style - end
+   ========================================================================== */

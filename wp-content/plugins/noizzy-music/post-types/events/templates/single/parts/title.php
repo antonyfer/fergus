@@ -1,0 +1,1 @@
+<h2 class="edge-event-title"> <?php echo get_the_title(noizzy_edge_get_page_id()); ?> </h2>

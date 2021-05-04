@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Store Buttons shortcode style - begin
+   ========================================================================== */
+
+.edge-store-buttons-holder {
+    position: relative;
+    margin: 40px 0 0;
+
+    .edge-store-button {
+        display: inline-block;
+        vertical-align: top;
+
+        &:first-child {
+            margin: 0 20px 0 0;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+   Store Buttons shortcode style - end
+   ========================================================================== */

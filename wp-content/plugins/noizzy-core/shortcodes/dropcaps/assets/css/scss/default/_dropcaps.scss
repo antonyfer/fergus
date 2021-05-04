@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Dropcaps shortcode style - begin
+   ========================================================================== */
+
+.edge-dropcaps {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    font-family: $default-heading-font;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: $default-heading-color;
+    text-align: center;
+    margin: 3px 15px 0 0;
+
+    &.edge-square {
+        height: 35px;
+        width: 35px;
+        font-family: $default-heading-font;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 34px;
+        color: #fff;
+        background-color: $default-heading-color;
+        margin: 8px 17px 0 0;
+        box-sizing: border-box;
+    }
+
+    &.edge-circle {
+        @extend .edge-square;
+        border-radius: 3em;
+    }
+}
+/* ==========================================================================
+   Dropcaps shortcode style - end
+   ========================================================================== */

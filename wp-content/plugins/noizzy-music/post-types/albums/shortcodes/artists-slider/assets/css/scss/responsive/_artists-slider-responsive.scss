@@ -1,0 +1,61 @@
+/* ==========================================================================
+# Artists slider responsive - begin
+	========================================================================== */
+
+/*custom class on holding column .artists-slider-responsive*/
+.artists-slider-responsive {
+
+  @include laptop-landscape-large {
+    .edge-artists-slider {
+      .edge-artist-image {
+        height: 400px;
+        background-position: 50% 0;
+      }
+    }
+  }
+
+  @include laptop-landscape-mac {
+    .edge-artists-slider {
+      .edge-artist-image {
+        height: 390px;
+      }
+    }
+  }
+
+  @include laptop-landscape-medium {
+    .edge-artists-slider {
+      .edge-artist-image {
+        height: 424px;
+      }
+    }
+  }
+
+  @include ipad-landscape {
+    .edge-artists-slider {
+      .edge-artist-image {
+        height: 521px;
+      }
+    }
+  }
+
+  @include ipad-portrait {
+    .edge-artists-slider {
+      .edge-artist-image {
+        height: 728px;
+      }
+    }
+  }
+
+  @include phone-portrait {
+    .edge-artists-slider {
+      .edge-artist-image {
+        height: 452px;
+      }
+    }
+  }
+
+}
+
+/* ==========================================================================
+# Artists slider responsive - end
+========================================================================== */

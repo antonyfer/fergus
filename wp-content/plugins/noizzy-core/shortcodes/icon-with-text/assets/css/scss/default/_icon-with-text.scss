@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.edge-iwt {
+	@include edgeRelativeHolderLayout();
+	
+	.edge-iwt-icon {
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		.edge-icon-shortcode {
+			line-height: 1;
+			
+			&.edge-circle,
+			&.edge-square {
+				line-height: 2;
+			}
+		}
+	}
+	
+	.edge-iwt-title {
+		margin: 0;
+		line-height: 1.2em;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	
+	.edge-iwt-title-text {
+		display: block;
+	}
+	
+	.edge-iwt-text {
+		margin: 20px 0 0;
+	}
+	
+	&.edge-iwt-icon-left {
+		width: auto;
+		
+		.edge-iwt-icon,
+		.edge-iwt-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.edge-iwt-icon {
+			position: relative;
+			top: 1px;
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.edge-iwt-content {
+			padding: 0 0 0 13px;
+		}
+	}
+	
+	&.edge-iwt-icon-left-from-title {
+		
+		.edge-iwt-icon,
+		.edge-iwt-title-text {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.edge-iwt-icon {
+			
+			.edge-icon-element {
+				@include edgeTransition(none);
+			}
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.edge-iwt-title-text {
+			padding: 0 0 0 17px;
+		}
+	}
+	
+	&.edge-iwt-icon-top {
+		text-align: center;
+		
+		.edge-iwt-content {
+			padding: 23px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

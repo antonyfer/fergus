@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.edge-ps-related-posts-holder {
+	@include edgeRelativeHolderLayout();
+	margin: 80px 0 0;
+	clear: both;
+
+	.edge-ps-related-posts-title {
+
+		margin: 0 0 37px 0;
+
+		&:before {
+			position: relative;
+			padding-right: 10px;
+			color: #ff9d84;
+			content: "\f0a7";
+			display: inline-block;
+			font-size: 16px;
+			font-family: FontAwesome;
+		}
+	}
+
+	.edge-owl-slider .owl-stage-outer{
+		overflow: visible;
+	}
+}
+
+.edge-portfolio-single-holder {
+	.edge-ps-related-posts-holder {
+		margin: 30px 0 0;
+	}
+
+	&.edge-ps-gallery-layout {
+		.edge-ps-related-posts-holder {
+			margin: 70px 0 0;
+		}
+	}
+
+	&.edge-ps-masonry-layout {
+		.edge-ps-related-posts-holder {
+			margin: 80px 0 0;
+		}
+	}
+
+	&.edge-ps-slider-layout {
+		.edge-ps-related-posts-holder {
+			margin: 70px 0 0;
+		}
+	}
+
+	&.edge-ps-small-images-layout {
+		.edge-ps-related-posts-holder {
+			margin: 80px 0 0;
+		}
+	}
+
+	&.edge-ps-small-gallery-layout {
+		.edge-ps-related-posts-holder {
+			margin: 50px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

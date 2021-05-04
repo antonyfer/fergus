@@ -1,0 +1,1 @@
+<p class="edge-ps-info-title"><?php echo esc_html( $title ); ?></p>

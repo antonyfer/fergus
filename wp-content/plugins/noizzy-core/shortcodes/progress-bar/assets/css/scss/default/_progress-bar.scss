@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Progress Bar shortcode style - begin
+   ========================================================================== */
+
+.edge-progress-bar {
+    @include edgeRelativeHolderLayout();
+    
+    .edge-pb-title-holder {
+        position: relative;
+        margin: 10px 0 4px;
+        
+        .edge-pb-title {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 100;
+        }
+    }
+	
+    .edge-pb-percent {
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        width: auto;
+	    display: inline-block;
+	    vertical-align: middle;
+	    opacity: 0;
+	    z-index: 10;
+        
+        &:after {
+            content: '%';
+        }
+    }
+    
+    .edge-pb-content-holder {
+        position: relative;
+        height: 3px;
+        overflow: hidden;
+        background-color: #ebebeb;
+        
+        .edge-pb-content {
+            height: 3px;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: $first-main-color;
+        }
+    }
+}
+/* ==========================================================================
+   Progress Bar shortcode style - end
+   ========================================================================== */

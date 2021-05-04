@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Albums list shortcode responsive styles - begin
+   ========================================================================== */
+.edge-albums-player-slider-holder {
+
+  @include laptop-landscape-large {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0 0;
+        }
+
+        .owl-stage-outer {
+          .edge-album-image-holder {
+
+            .edge-audio-player-wrapper {
+              bottom: 32%;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  @include laptop-landscape-mac {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0 12%;
+        }
+
+        .owl-stage-outer {
+          .edge-album-image-holder {
+
+            .edge-audio-player-wrapper {
+              bottom: 32%;
+            }
+
+            .edge-album-text-holder {
+              bottom: 7%;
+
+              .edge-album-title {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  @include laptop-landscape-medium {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0;
+        }
+
+        .owl-stage-outer {
+          .edge-album-image-holder {
+
+            .edge-audio-player-wrapper {
+              bottom: 37%;
+            }
+
+            .edge-album-text-holder {
+              bottom: 12%;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  @include ipad-landscape {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0 15%;
+        }
+
+        .owl-stage-outer {
+          .edge-album-image-holder {
+
+            img {
+              height: 70%;
+              width: auto;
+            }
+
+            .edge-audio-player-wrapper {
+              bottom: 22%;
+            }
+
+            .edge-album-text-holder {
+              bottom: 3%;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  @include ipad-portrait {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0 15%;
+        }
+
+        .owl-stage-outer {
+          .edge-album-image-holder {
+
+            img {
+              height: 50%;
+              width: auto;
+            }
+
+            .edge-audio-player-wrapper {
+              bottom: 29%;
+            }
+
+            .edge-album-text-holder {
+              bottom: 12%;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  @include phone-landscape {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0 31%;
+        }
+
+        .owl-stage-outer {
+          .edge-album-image-holder {
+
+            img {
+              height: 70%;
+              width: auto;
+            }
+
+            .edge-audio-player-wrapper {
+              bottom: 14%;
+            }
+
+            .edge-album-text-holder {
+              display: none;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  @include phone-portrait {
+
+    .edge-alb-with-player {
+      .edge-albums-list-holder.edge-owl-slider {
+        .edge-album {
+          padding: 0 14%;
+        }
+
+        .owl-stage-outer {
+
+          .owl-item {
+
+            .edge-album-image-holder {
+              .edge-audio-player-wrapper.edge-apw-loaded {
+                opacity: 1;
+              }
+            }
+          }
+
+          .edge-album-image-holder {
+
+            img {
+              height: 40%;
+              width: auto;
+            }
+
+            .edge-audio-player-wrapper {
+              bottom: 35%;
+            }
+
+            .edge-album-text-holder {
+              display: none;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+/* ==========================================================================
+   Albums list shortcode responsive styles - end
+   ========================================================================== */

@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Album disc shortcode start responsive styles
+   ========================================================================== */
+@include phone-landscape { 
+	.edge-album-disc{
+		>a,
+		.edge-album-disc-inner { 
+			width: 100%;
+		}
+
+		&.edge-animate-on-hover {
+			&:hover {
+				.edge-album-disc-element {
+					@include edgeTransform(translate3d(12%,0,0));
+				}
+			}
+		}
+
+		&.edge-animate-on-appear {
+			&.edge-appeared {
+				.edge-album-disc-element {
+					@include edgeTransform(translate3d(12%,0,0));
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+  Album disc shortcode end responsive styles
+  ========================================================================== */

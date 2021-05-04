@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Testimonials shortcode responsive style - begin
+   ========================================================================== */
+@include phone-landscape {
+    .edge-testimonials-holder {
+        .owl-nav {
+            display: none;
+        }
+
+        .edge-testimonials {
+        	padding: 0;
+        }
+    }
+}	
+
+/* ==========================================================================
+   Testimonials shortcode responsive style - end
+   ========================================================================== */

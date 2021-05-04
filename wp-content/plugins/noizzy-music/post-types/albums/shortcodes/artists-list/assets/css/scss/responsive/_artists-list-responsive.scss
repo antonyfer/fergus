@@ -1,0 +1,108 @@
+@include laptop-landscape-large {
+  .edge-artist-view-single {
+    .edge-atrist-single {
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .edge-grid-col-7,
+      .edge-grid-col-5 {
+        width: 50%;
+      }
+
+      .edge-atrist-image-holder .edge-atrist-image {
+        height: 70%;
+        margin-top: 20%;
+      }
+    }
+  }
+}
+
+@include laptop-landscape-mac {
+  .edge-artist-view-single {
+    .edge-atrist-single {
+      width: 100%;
+
+      .edge-grid-col-7 {
+        width: 48%;
+      }
+
+      .edge-grid-col-5 {
+        width: 50%;
+      }
+
+      .edge-atrist-image-holder .edge-atrist-image {
+        height: 70%;
+        margin-top: 16%;
+      }
+    }
+  }
+}
+
+@include laptop-landscape-medium {
+  .edge-artist-view-single {
+    .edge-atrist-single {
+      width: 100%;
+
+      .edge-grid-col-7,
+      .edge-grid-col-5 {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@include ipad-landscape {
+  .edge-artist-view-single {
+    .edge-atrist-single {
+      width: 50%;
+      height: 50%;
+
+      .edge-grid-col-7,
+      .edge-grid-col-5 {
+        width: 100%;
+        float: none;
+      }
+
+      .edge-atrist-image-holder .edge-atrist-image {
+        height: 100%;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@include phone-landscape {
+  .edge-artist-view-single {
+    top: 65%;
+
+    .edge-atrist-single {
+      width: 90%;
+      height: 100%;
+
+      .edge-grid-col-7 {
+        display: none;
+      }
+    }
+  }
+}
+
+@include phone-portrait {
+  .edge-artist-view-single {
+    top: 60%;
+
+    .edge-atrist-single {
+      width: 40%;
+      height: 100%;
+    }
+  }
+}
+
+@include ipad-portrait {
+  .edge-artists-list {
+
+    .edge-artist {
+      width: 100% !important;
+    }
+  }
+}

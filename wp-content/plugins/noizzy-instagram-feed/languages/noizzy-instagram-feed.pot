@@ -1,0 +1,91 @@
+# Copyright (C) 2020 Edge Themes
+# This file is distributed under the same license as the Noizzy Instagram Feed plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Noizzy Instagram Feed 2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/noizzy-instagram-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-12-16T17:52:41+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: noizzy-instagram-feed\n"
+
+#. Plugin Name of the plugin
+msgid "Noizzy Instagram Feed"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds Instagram feed functionality to our theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Edge Themes"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:13
+msgid "Edge Instagram Widget"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:15
+msgid "Display your Instagram feed"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:27
+msgid "Title"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:32
+msgid "Type"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:34
+msgid "Gallery"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:35
+msgid "Carousel"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:41
+msgid "Number of Columns"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:43
+msgid "Two"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:44
+msgid "Three"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:45
+msgid "Four"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:46
+msgid "Six"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:47
+msgid "Nine"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:53
+msgid "Number of Photos"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:58
+msgid "Space Between Items"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:64
+msgid "Show Instagram Icon"
+msgstr ""
+
+#: widgets/noizzy-instagram-widget.php:70
+msgid "Images Cache Time"
+msgstr ""

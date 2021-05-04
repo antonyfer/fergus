@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Clients Carousel shortcode style - begin
+   ========================================================================== */
+
+.edge-clients-grid-holder {
+    @include edgeRelativeHolderLayout();
+
+	.edge-cc-item {
+		@include edgeRelativeHolderLayout();
+		padding: 0 15px;
+		box-sizing: border-box;
+		
+		.touch & {
+			cursor: pointer;
+		}
+		
+		.edge-cc-item {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	/***** Hover Types - begin *****/
+	
+	&.edge-cc-hover-switch-images {
+		
+		.edge-cc-item {
+			
+			&:hover {
+				
+				.edge-cc-image {
+					opacity: 0;
+				}
+				
+				.edge-cc-hover-image {
+					opacity: 1;
+				}
+			}
+			
+			.edge-cc-image {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 auto;
+				opacity: 1;
+				@include edgeTransition(opacity .15s ease-out);
+			}
+			
+			.edge-cc-hover-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: auto;
+				opacity: 0;
+				@include edgeTransform(translateX(-50%));
+				@include edgeTransition(opacity .15s ease-out);
+			}
+		}
+	}
+	
+	&.edge-cc-hover-roll-over {
+		
+		.edge-cc-item {
+			overflow: hidden;
+			
+			&:hover {
+				
+				.edge-cc-image {
+					@include edgeTransform(translateY(100%));
+				}
+				
+				.edge-cc-hover-image {
+					@include edgeTransform(translate(-50%, 0));
+				}
+			}
+			
+			.edge-cc-image {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 auto;
+				@include edgeTransitionTransform(.4s ease);
+			}
+			
+			.edge-cc-hover-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: auto;
+				@include edgeTransform(translate(-50%, -100%));
+				@include edgeTransitionTransform(.4s ease);
+			}
+		}
+	}
+	
+	/***** Hover Types - end *****/
+
+	/*** Grid ***/
+	$cols: ('1', '2', '3', '4', '5', '6');
+
+	@for $i from 0 to length($cols) {
+		&.edge-clients-col-#{nth($cols, $i+1)} {
+			$column_width: 100%/($i+1);
+
+			.edge-cc-item {
+					width: $column_width;
+			}
+		}
+	}
+
+	@include ipad-portrait {
+		@for $i from 0 to length($cols) {
+			&.edge-clients-col-#{nth($cols, $i+1)} {
+
+				.edge-cc-item {
+					width: 50%;
+				}
+			}
+		}
+
+		 .edge-cc-item:nth-child(odd):last-child {
+			width: 100%;
+			 text-align: center;
+		}
+	}
+
+	@include phone-landscape {
+		@for $i from 0 to length($cols) {
+			&.edge-clients-col-#{nth($cols, $i+1)} {
+
+				.edge-cc-item {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+}
+/* ==========================================================================
+   Clients Carousel shortcode style - end
+   ========================================================================== */

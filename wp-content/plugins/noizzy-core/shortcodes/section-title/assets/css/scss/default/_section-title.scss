@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.edge-section-title-holder {
+    @include edgeRelativeHolderLayout();
+	box-sizing: border-box;
+	
+	&.edge-st-two-columns {
+		
+		$space_label: ('tiny', 'small', 'normal');
+		$space_width: (5, 10, 15);
+		
+		@for $i from 0 to length($space_label) {
+			&.edge-st-#{nth($space_label,$i+1)}-space {
+				$column_width: nth($space_width,$i+1);
+				
+				.edge-st-inner {
+					margin: 0 -#{$column_width}px;
+				}
+			
+				.edge-st-title,
+				.edge-st-text {
+					padding: 0 #{$column_width}px;
+				}
+			}
+		}
+		
+		.edge-st-title,
+		.edge-st-text {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+			float: left;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		
+		&.edge-st-title-left {
+			
+			.edge-st-title {
+				text-align: right;
+			}
+			
+			.edge-st-text {
+				text-align: left;
+			}
+		}
+		
+		&.edge-st-title-right {
+			
+			.edge-st-title {
+				float: right;
+				text-align: left;
+			}
+			
+			.edge-st-text {
+				text-align: right;
+			}
+		}
+	}
+	
+    .edge-st-title {
+	    display: block;
+        margin: 0;
+	    
+	    .edge-st-title-bold {
+		    font-weight: 700;
+	    }
+	    
+	    .edge-st-title-light {
+		    font-weight: 300;
+	    }
+    }
+    
+    .edge-st-text {
+	    display: block;
+        margin: 27px 0 0;
+		color: #000;
+    }
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+

@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.edge-ps-navigation {
+	z-index: 300;
+	padding: 0;
+	height: 0;
+	
+	.edge-ps-prev,
+	.edge-ps-next {
+		position: fixed;
+		top: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		z-index: 400;
+		opacity: 0;
+		@include edgeTransition(opacity 0.3s ease);
+
+		&.show{
+			opacity: 1;
+		}
+
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 12px;
+			line-height: 20px;
+			font-weight: 400;
+
+			
+			.edge-ps-nav-mark {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+                font-size: 30px;
+                line-height: 35px;
+				
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+
+			.edge-ps-nav-label{
+				display: block;
+				position: relative;
+				font-style: italic;
+				margin: 10px 0;
+				font-weight: 500;
+			}
+		}
+	}
+
+	.edge-ps-prev {
+		left: 50px;
+
+		a {
+			.edge-ps-nav-mark {
+
+			}
+		}
+	}
+	
+	.edge-ps-next {
+		right: 50px;
+		text-align: right;
+		
+		a {
+			.edge-ps-nav-mark {
+
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

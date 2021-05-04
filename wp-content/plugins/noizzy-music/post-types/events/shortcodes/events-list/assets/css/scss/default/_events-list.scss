@@ -1,0 +1,394 @@
+/* ==========================================================================
+   Events List start style
+   ========================================================================== */
+
+.edge-events-list-holder-outer {
+
+    &.edge-default-button {
+
+        .edge-events-list-load-more .edge-btn {
+
+            &:hover {
+                color: #000 !important;
+                background-color: #fff !important;
+                border-color: #000!important;
+            }
+        }
+    }
+
+    &.edge-light-button {
+
+        .edge-events-list-load-more .edge-btn {
+            color: #000;
+            background-color: #fff;
+
+            &:hover {
+                color: #000 !important;
+                background-color: #fff !important;
+                border-color: #fff!important;
+            }
+        }
+    }
+
+    &.edge-events-block-layout {
+        @include edgeRelativeHolderLayout;
+        margin: 0 !important;
+
+        &:not(.edge-bl-one-column) {
+
+            .edge-event-content-blocks {
+                float: left;
+            }
+        }
+
+        .edge-event-content-blocks {
+            box-sizing: border-box;
+        }
+
+        .edge-event-block-item {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.17);
+
+            img {
+                display: block;
+                @include edgeTransitionTransform(.2s ease);
+            }
+
+            &:after {
+                position: absolute;
+                display: block;
+                content: " ";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.59);
+                opacity: 0;
+                z-index: 1;
+                @include edgeTransition(opacity .2s ease);
+            }
+
+            &:hover {
+
+                img {
+                    @include edgeTransitionTransform(.45s $default-easing-img);
+                    @include edgeTransform(scale(1.07));
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+
+                .edge-event-content-item {
+
+                    &.edge-event-title-holder {
+                        opacity: 1;
+                        @include edgeTransitionTransform(.45s $default-easing-img);
+                        @include edgeTransform(translate3d(0,0,0) translateY(-58%));
+                    }
+                }
+
+                .edge-event-buy-tickets-holder {
+                    @include edgeTransform(none);
+                }
+            }
+
+            .edge-event-title,
+            .edge-event-location {
+                display: block;
+                margin-bottom: 3px;
+                padding: 0 15%;
+                color: #fff;
+
+                a {
+                    color: currentColor;
+                }
+            }
+
+            .edge-event-title {
+                margin-top: 0;
+            }
+
+            .edge-btn.edge-btn-small {
+                padding: 12px 21px;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            .edge-event-free-holder,
+            .edge-event-sold-out-holder {
+                box-sizing: border-box;
+                max-width: 100%;
+                width: 100%;
+                padding: 12px 21px;
+                background: #000;
+                color: #fff;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            .edge-event-content-item {
+                top: auto;
+                right: auto;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: 9;
+                @include edgeTransform(none);
+
+                a {
+                    width: 100%;
+                    text-align: center;
+                    border: 0;
+                }
+
+               &.edge-event-title-holder {
+                   position: absolute;
+                   top: 50%;
+                   left: 0;
+                   width: 100%;
+                   height: 130px;
+                   padding: 10px 0;
+                   opacity: 0;
+                   text-align: center;
+                   @include edgeTransitionTransform(.25s ease);
+                   @include edgeTransition(opacity 0.25s, transform 0.25s);
+                   @include edgeTransform(translate3d(0,40px,0) translateY(-58%));
+                }
+
+                &.edge-event-date-holder {
+                    width: auto;
+                    top: 0;
+                    bottom: auto;
+                    right: 0;
+                    left: auto;
+                    background: #000;
+                    color: #fff;
+                    text-align: center;
+                    padding: 9px 13px;
+
+                    .edge-event-date-day-holder {
+                        margin-top: 0;
+                        font-family: $default-heading-font;
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .edge-event-buy-tickets-holder {
+                @include edgeTransform(translateY(100%));
+                @include edgeTransition(transform 0.3s, background 0.3s);
+            }
+        }
+
+        $columns_number: ('two', 'three', 'four', 'five');
+
+        @for $i from 0 to length($columns_number) {
+            &.edge-bl-#{nth($columns_number,$i+1)}-columns {
+
+                .edge-event-content-blocks {
+                    width: 100% / ($i+2);
+                }
+
+                @if ($i > 1) { // set different break point for four and five columns
+                    @media only screen and (min-width: $laptop-landscape-medium-plus-pixel) {
+
+                        .edge-event-content-blocks {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                } @else {
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                        .edge-event-content-blocks {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        $space_label: ('no', 'tiny', 'small', 'normal', 'medium', 'large', 'huge' );
+        $space_width: (0, 5, 10, 15, 20, 25, 33);
+
+        @for $i from 0 to length($space_label) {
+            &.edge-#{nth($space_label,$i+1)}-space {
+                $column_width: nth($space_width, $i+1);
+
+                margin: 0 -#{$column_width}px;
+
+                .edge-event-content-blocks {
+                    padding: 0 #{$column_width}px;
+                }
+            }
+        }
+    }
+
+    .edge-event-content-item {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .edge-event-date-day-holder, .edge-event-weekday-month-holder {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .edge-event-content {
+        color: $default-dark-color;
+        position: relative;
+        padding: 13px 0;
+
+        &:hover {
+            .edge-event-title a,
+            .edge-event-date-holder {
+                color: $gray-hover-color;
+            }
+        } 
+    }
+
+    .edge-event-date-holder {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include edgeTransform(translateY(-50%));
+        padding-right: 20px;
+        @include edgeTransition(color .3s ease);
+    }
+
+    .edge-event-date-day-holder {
+        font-family: $default-heading-font;
+        font-size: 60px;
+        font-weight: 700;
+        margin-top: -5px;
+    }
+
+    .edge-event-weekday-month-holder {
+        margin-left: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .edge-event-month-holder {
+        margin-top: -3px;
+    }
+
+    .edge-event-title-holder {
+        padding-left: 127px;
+        padding-right: 240px;
+    }
+
+    .edge-event-title {
+        text-transform: uppercase;
+    }
+
+    .edge-event-buy-tickets-holder {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include edgeTransform(translateY(-50%));
+
+        .edge-event-sold-out-holder {
+            display: block;
+            min-width: 130px;
+            color: rgba(#000,.25);
+            font-family: $default-heading-font;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .edge-event-free-holder {
+            display: block;
+            min-width: 130px;
+            text-align: center;
+            color: rgba(#000, .25);
+            font-family: $default-heading-font;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+    }
+
+    .edge-events-list-paging {
+        margin-top: 13px;
+        text-align: center;
+
+        .edge-btn.edge-btn-outline {
+            background-color: transparent;
+            color: $third-main-color;
+            border-color: $third-main-color!important;
+
+            &:hover {
+                background-color: $third-main-color!important;;
+                color: #fff!important;
+                border-color: $third-main-color!important;
+            }
+        }
+    }
+
+    &.edge-events-light-skin {
+        .edge-event-content {
+            color: #fff;
+
+            &:hover {
+                .edge-event-title a,
+                .edge-event-date-holder {
+                    color: $light-skin-color;
+                }
+            }
+        }
+
+        .edge-event-title {
+            color: #fff;
+        }
+
+        .edge-events-list-paging {
+
+            .edge-btn.edge-btn-outline {
+                background-color: transparent;
+                color: $first-main-color;
+                border-color: $first-main-color!important;
+
+                &:hover {
+                    background-color: $first-main-color!important;;
+                    color: $default-dark-color!important;
+                    border-color: $first-main-color!important;
+                }
+            }
+        }
+
+        .edge-event-buy-tickets-holder {
+
+            .edge-event-sold-out-holder {
+                color: $light-skin-color;
+
+            }
+
+            .edge-event-free-holder {
+                color: $light-skin-color;
+            }
+
+        }
+
+        .event-buy-tickets-button {
+            background: #fff;
+        }
+
+    }
+}
+
+/* ==========================================================================
+   Events List end style
+   ========================================================================== */

@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Elements Holder shortcode responsive style - begin
+   ========================================================================== */
+
+.edge-elements-holder {
+	
+	$columns_label: ('two', 'three', 'four', 'five', 'six');
+	
+	@include laptop-landscape-mac {
+		
+		&.edge-responsive-mode-1366 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.edge-#{nth($columns_label,$i+1)}-columns {
+					
+					.edge-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-left {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-right {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-center {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include ipad-landscape {
+		
+		&.edge-responsive-mode-1024 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.edge-#{nth($columns_label,$i+1)}-columns {
+					
+					.edge-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-left {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-right {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-center {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include ipad-portrait {
+		
+		&.edge-responsive-mode-768 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.edge-#{nth($columns_label,$i+1)}-columns {
+					
+					.edge-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-left {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-right {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-center {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include phone-landscape {
+		
+		&.edge-responsive-mode-680 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.edge-#{nth($columns_label,$i+1)}-columns {
+					
+					.edge-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-left {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-right {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-center {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include phone-portrait {
+		
+		&.edge-responsive-mode-480 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.edge-#{nth($columns_label,$i+1)}-columns {
+					
+					.edge-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-left {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-right {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.edge-one-column-alignment-center {
+				
+				.edge-eh-item {
+					
+					.edge-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+		
+		.edge-eh-item-content{
+			padding: 0 10px;
+		}
+	}
+}
+/* ==========================================================================
+   Elements Holder shortcode responsive style - end
+   ========================================================================== */

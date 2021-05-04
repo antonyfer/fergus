@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.edge-testimonials-holder {
+    @include edgeRelativeHolderLayout();
+    
+    .edge-testimonials,
+    .edge-testimonial-content,
+    .edge-testimonial-text-holder {
+        @include edgeRelativeHolderLayout();
+    }
+
+    .edge-testimonials {
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+
+    .edge-testimonial-image {
+
+        img {
+            width: auto !important;
+            border-radius: 5em;
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */

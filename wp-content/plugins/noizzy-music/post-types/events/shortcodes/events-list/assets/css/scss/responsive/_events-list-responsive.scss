@@ -1,0 +1,144 @@
+@include ipad-landscape {
+
+  .edge-events-list-holder-outer {
+
+    &.edge-events-block-layout {
+
+      .edge-event-block-item {
+
+        &:hover {
+
+          .edge-event-content-item {
+
+            &.edge-event-title-holder {
+              @include edgeTransform(translate3d(0,0,0) translateY(-39%));
+            }
+          }
+        }
+
+        .edge-event-title {
+          font-size: 18px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include ipad-portrait {
+
+  .edge-events-list-holder-outer {
+
+    .edge-event-content {
+      padding: 40px 0;
+    }
+
+    .edge-event-date-holder {
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.edge-events-block-layout {
+
+      .edge-event-content-blocks {
+        width: 100% !important;
+      }
+
+      .edge-event-block-item {
+
+        &:hover {
+
+          .edge-event-content-item {
+
+            &.edge-event-title-holder {
+              @include edgeTransform(translate3d(0,0,0) translateY(-45%));
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+
+        .edge-event-title {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .edge-events-list-holder-outer:not(.edge-events-block-layout) {
+
+    .edge-event-title-holder {
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      display: block;
+
+      .edge-event-title {
+        font-size: 18px;
+        text-align: left;
+        padding-left: 120px;
+      }
+    }
+  }
+
+}
+
+@include phone-landscape {
+
+  .edge-events-list-holder-outer {
+
+    &.edge-events-block-layout {
+
+      .edge-event-block-item {
+
+        &:hover {
+
+          .edge-event-content-item {
+
+            &.edge-event-title-holder {
+              @include edgeTransform(translate3d(0, 0, 0) translateY(-39.5%));
+            }
+          }
+        }
+      }
+
+      .edge-event-title-holder {
+        .edge-event-title {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .edge-events-list-holder-outer:not(.edge-events-block-layout) {
+
+    .edge-event-date-holder,
+    .edge-event-buy-tickets-holder {
+      position: relative;
+      @include edgeTransform(none);
+    }
+
+    .edge-event-buy-tickets-holder {
+
+      .edge-event-free-holder,
+      .edge-event-sold-out-holder {
+        text-align: left;
+      }
+    }
+
+    .edge-event-title-holder {
+
+      .edge-event-title {
+        text-align: left;
+        padding: 0;
+      }
+    }
+  }
+}

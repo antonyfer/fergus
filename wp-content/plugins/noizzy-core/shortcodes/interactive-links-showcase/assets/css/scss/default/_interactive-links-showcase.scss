@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Interactive Links Showcase shortcode style - begin
+   ========================================================================== */
+
+.swiper-container.edge-interactive-links-showcase.full-page {
+	height: 100vh;
+	position: relative;
+
+	.swiper-wrapper {
+		height: 100vh;
+
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.edge-interactive-links-showcase-links-holder {
+		position: absolute;
+		z-index: 10;
+		top: 50%;
+		left: 4.2%;
+		@include edgeTransform(translateY(-50%));
+
+		.edge-slide-link {
+			display: block;
+			width: auto;
+			padding: 8px 0;
+
+			.edge-slide-link-text {
+				font-size: 14px;
+				text-transform: uppercase;
+				color: #fff;
+				letter-spacing: 0.1em;
+				line-height: 1em;
+				position: relative;
+
+				&:after {
+				    content: "";
+				    position: absolute;
+				    bottom: -3px;
+				    left: 0;
+				    right: 0;
+				    margin: 0 auto;
+				    width: 100%;
+				    border-bottom: 1px solid #fff;
+				    transform-origin:left;
+				    @include edgeTransform(scale(0,1));
+				    @include edgeTransitionTransform(ease .3s);
+				}
+			}
+
+			&.edge-slide-link-active,
+			&:hover {
+				.edge-slide-link-text {
+					&:after {
+						@include edgeTransform(scale(1,1));
+					}
+				}
+			}
+		}
+
+	}
+
+
+	.swiper-pagination  {
+		opacity: 0;
+	}
+}
+
+/* ==========================================================================
+   Interactive Links Showcase shortcode style - end
+   ========================================================================== */

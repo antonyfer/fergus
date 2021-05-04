@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+
+.edge-banner-holder {
+    @include edgeRelativeHolderLayout();
+	
+	.touch & {
+		cursor: pointer;
+	}
+	
+	&.edge-visible-on-hover {
+		
+		&:hover {
+			
+			.edge-banner-text-holder {
+				opacity: 1;
+			}
+		}
+		
+		.edge-banner-text-holder {
+			opacity: 0;
+			@include edgeTransition(opacity .2s ease-out);
+		}
+	}
+	
+	&.edge-disabled {
+		
+		.edge-banner-text-holder {
+			display: none;
+		}
+	}
+	
+	&.edge-banner-info-centered {
+		
+		.edge-banner-text-holder {
+			padding: 65px 20px 70px 20px;
+			text-align: center;
+		}
+	}
+	
+	.edge-banner-image {
+		@include edgeRelativeHolderLayout();
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.edge-banner-text-holder {
+		@include edgeAbsoluteHolderLayout();
+		padding: 35px;
+		background-color: rgba($default-heading-color, .4);
+		box-sizing: border-box;
+		
+		@include ipad-portrait {
+			padding: 25px;
+		}
+	}
+	
+	.edge-banner-text-outer {
+		@include edgeTableLayout();
+	}
+	
+	.edge-banner-text-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		vertical-align: middle;
+	}
+	
+	.edge-banner-subtitle {
+		margin: 0 0 4px;
+		color: #fff;
+	}
+	
+	.edge-banner-title {
+		margin: 0;
+		color: #fff;
+		
+		.edge-banner-title-light {
+			font-weight: 300;
+		}
+	}
+	
+	.edge-banner-link-text {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 11px 0 0;
+		color: #fff;
+		line-height: 1em;
+		z-index: 2;
+		@include edgeTransform(translateZ(0));
+		
+		&:hover {
+			
+			.edge-banner-link-hover {
+				width: 100%;
+			}
+		}
+		
+		.edge-banner-link-original {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			
+			span {
+				color: inherit;
+			}
+		}
+		
+		.edge-banner-link-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0.1%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			overflow: hidden;
+			@include edgeTransition(width .4s ease-in-out);
+			
+			span {
+				color: $first-main-color;
+			}
+		}
+		
+		.edge-banner-link-icon,
+		.edge-banner-link-label {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		.edge-banner-link-icon {
+			margin: 0 2px 0 0;
+			font-size: 15px;
+		}
+		
+		.edge-banner-link-label {
+			font-size: 14px;
+			line-height: inherit;
+		}
+	}
+
+	.edge-banner-link {
+		@include edgeAbsoluteHolderLayout();
+		z-index: 1;
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

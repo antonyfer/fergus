@@ -1,0 +1,34 @@
+@include ipad-landscape {
+    .single-album .edge-album-right-holder{
+        padding-left: 0;
+        padding-top: 45px;
+    }
+}
+
+@include phone-landscape {
+    .edge-audio-player-holder .edge-audio-player-details-holder .edge-audio-player-details .edge-audio-player-title {
+        display: none;
+    }
+
+    .single-album .edge-album-tracks-holder .edge-tracks-holder .edge-track-holder .edge-track-title,
+    .single-album .edge-album-tracks-holder .edge-tracks-holder .edge-track-holder .edge-track-buy {
+        display: block;
+        float: none;
+    }
+}
+
+@include phone-portrait {
+    .single-album .edge-single-album-reviews-holder {
+        padding: 30px;
+    }
+
+    .single-album .edge-single-album-reviews-holder .swiper-navigation {
+        display: none;
+    }
+
+    .single-album {
+        .edge-audio-player-wrapper.edge-player-featured-image .player-box {
+            max-width: 300px;
+        }
+    }
+}

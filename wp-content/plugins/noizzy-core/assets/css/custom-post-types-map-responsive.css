@@ -1,0 +1,460 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+.edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images {
+  /***** Columns Layout - begin *****/
+  /***** Columns Layout - end *****/
+}
+
+@media only screen and (max-width: 1200px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images.edge-ps-four-columns .edge-ps-image {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images.edge-ps-four-columns .edge-ps-image:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images.edge-ps-three-columns .edge-ps-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images.edge-ps-three-columns .edge-ps-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images.edge-ps-four-columns .edge-ps-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images.edge-ps-four-columns .edge-ps-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-gallery-images .edge-ps-image {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-grid-sizer {
+    width: 33.33333%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image.edge-masonry-size-large-width,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image.edge-masonry-size-large-width-height {
+    width: 66.66667%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-grid-sizer {
+    width: 33.33333%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-image.edge-masonry-size-large-width,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-image.edge-masonry-size-large-width-height {
+    width: 66.66667%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-three-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-three-columns .edge-ps-grid-sizer {
+    width: 50%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-three-columns .edge-ps-image.edge-masonry-size-large-width,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-three-columns .edge-ps-image.edge-masonry-size-large-width-height {
+    width: 100%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-grid-sizer {
+    width: 50%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image.edge-masonry-size-large-width,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image.edge-masonry-size-large-width-height {
+    width: 100%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-grid-sizer {
+    width: 50%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-image.edge-masonry-size-large-width,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-five-columns .edge-ps-image.edge-masonry-size-large-width-height {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-two-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-two-columns .edge-ps-grid-sizer {
+    width: 100%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-three-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-three-columns .edge-ps-grid-sizer {
+    width: 100%;
+  }
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-image,
+  .edge-portfolio-single-holder .edge-ps-image-holder.edge-ps-masonry-images.edge-ps-four-columns .edge-ps-grid-sizer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-single-holder .edge-ps-info-holder {
+    margin: 30px 0 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Category List shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .edge-portfolio-category-list-holder.edge-pcl-four-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .edge-portfolio-category-list-holder.edge-pcl-four-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .edge-portfolio-category-list-holder.edge-pcl-five-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .edge-portfolio-category-list-holder.edge-pcl-five-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-category-list-holder.edge-pcl-three-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .edge-portfolio-category-list-holder.edge-pcl-three-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-category-list-holder.edge-pcl-four-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .edge-portfolio-category-list-holder.edge-pcl-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-category-list-holder.edge-pcl-five-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .edge-portfolio-category-list-holder.edge-pcl-five-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .edge-portfolio-category-list-holder article {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Category List shortcode responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-fullheight-slider-holder {
+    height: calc(100vh - 70px);
+  }
+}
+
+/* ==========================================================================
+   Portfolio shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-five-columns article {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-five-columns article:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns .edge-pl-grid-sizer {
+    width: 25%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article.edge-masonry-size-large-width, .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article.edge-masonry-size-large-width-height {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-four-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 1025px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-four-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-five-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 1025px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-five-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns .edge-pl-grid-sizer {
+    width: 33.33333%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article.edge-masonry-size-large-width, .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article.edge-masonry-size-large-width-height {
+    width: 66.66667%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns .edge-pl-grid-sizer {
+    width: 33.33333%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article.edge-masonry-size-large-width, .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article.edge-masonry-size-large-width-height {
+    width: 66.66667%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-three-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-three-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-four-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-five-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .edge-portfolio-list-holder.edge-pl-gallery.edge-pl-five-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-three-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-three-columns .edge-pl-grid-sizer {
+    width: 50%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-three-columns article.edge-masonry-size-large-width, .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-three-columns article.edge-masonry-size-large-width-height {
+    width: 100%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns .edge-pl-grid-sizer {
+    width: 50%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article.edge-masonry-size-large-width, .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article.edge-masonry-size-large-width-height {
+    width: 100%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns .edge-pl-grid-sizer {
+    width: 50%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article.edge-masonry-size-large-width, .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article.edge-masonry-size-large-width-height {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .edge-portfolio-list-holder.edge-pl-gallery article {
+    width: 100% !important;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-two-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-two-columns .edge-pl-grid-sizer {
+    width: 100%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-three-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-three-columns .edge-pl-grid-sizer {
+    width: 100%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-four-columns .edge-pl-grid-sizer {
+    width: 100%;
+  }
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns article,
+  .edge-portfolio-list-holder.edge-pl-masonry.edge-pl-five-columns .edge-pl-grid-sizer {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Portfolio shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Team list shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .edge-team-list-holder.edge-tl-five-columns .edge-team {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
+  .edge-team-list-holder.edge-tl-five-columns .edge-team:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-team-list-holder.edge-tl-four-columns .edge-team {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .edge-team-list-holder.edge-tl-four-columns .edge-team:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .edge-team-list-holder.edge-tl-five-columns .edge-team {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .edge-team-list-holder.edge-tl-five-columns .edge-team:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-team-list-holder.edge-tl-three-columns .edge-team {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .edge-team-list-holder.edge-tl-three-columns .edge-team:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-team-list-holder.edge-tl-four-columns .edge-team {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .edge-team-list-holder.edge-tl-four-columns .edge-team:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .edge-team-list-holder.edge-tl-five-columns .edge-team {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .edge-team-list-holder.edge-tl-five-columns .edge-team:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .edge-team-list-holder .edge-tl-inner .edge-team {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Team list shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 680px) {
+  .edge-testimonials-holder .owl-nav {
+    display: none;
+  }
+  .edge-testimonials-holder .edge-testimonials {
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   Testimonials shortcode responsive style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/noizzy-core/assets/css/custom-post-types-map-responsive.css.map */

@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Albums list shortcode responsive styles - begin
+   ========================================================================== */
+@include laptop-landscape-large {
+    .edge-albums-list-holder {
+        .edge-album {
+            .edge-album-buttons {
+                a {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+    .edge-albums-list-holder {
+        .edge-album {
+            .edge-album-buttons {
+                a {
+                    margin: 0 9px;
+                }
+            }
+        }
+    }
+
+    .edge-albums-list-holder-outer {
+        &.edge-alb-three-columns,
+        &.edge-alb-four-columns {
+            .edge-album {
+                width: 50%;
+                float: left;
+            }
+
+            .edge-album:nth-child(3n+1),
+            .edge-album:nth-child(4n+1) {
+                clear: none;
+            }
+
+            .edge-album:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+    .edge-albums-list-holder {
+        .edge-album {
+            .edge-album-buttons {
+                a {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .edge-albums-list-holder-outer {
+        &.edge-alb-two-columns,
+        &.edge-alb-three-columns,
+        &.edge-alb-four-columns {
+            .edge-album {
+                width: 100%;
+                box-sizing: border-box;
+                clear: both;
+            }
+
+            .edge-albums-list-holder {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Albums list shortcode responsive styles - end
+   ========================================================================== */

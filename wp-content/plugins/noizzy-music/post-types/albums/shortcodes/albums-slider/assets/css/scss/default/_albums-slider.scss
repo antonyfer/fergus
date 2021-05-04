@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Portfolio Slider shortcode style - begin
+   ========================================================================== */
+
+.edge-albums-slider-holder {
+    @include edgeRelativeHolderLayout();
+
+	.edge-albums-list-holder-outer {
+
+		&.edge-alb-five-columns,
+		&.edge-alb-four-columns,
+		&.edge-alb-three-columns,
+		&.edge-alb-two-columns,
+		&.edge-alb-one-columns {
+
+			.edge-album {
+				width: 100%;
+				padding: 0;
+			}
+		}
+
+		&.edge-alb-gallery .edge-album .edge-album-text-overlay-inner {
+			width: 100.1%;
+		}
+	}
+
+	.edge-albums-list-holder {
+
+		&.edge-nav-light-skin {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					color: $header-light-color;
+					
+					&:hover {
+						color: $header-light-hover-color;
+					}
+				}
+			}
+		}
+
+		&.edge-nav-dark-skin {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					color: $header-dark-color;
+					
+					&:hover {
+						color: $header-dark-hover-color;
+					}
+				}
+			}
+		}
+
+		&.edge-pag-light-skin {
+
+			.owl-dots {
+
+				.owl-dot {
+
+					span {
+						background-color: rgba($header-light-color, .2);
+					}
+
+					&.active,
+					&:hover {
+
+						span {
+							background-color: $header-light-hover-color;
+						}
+					}
+				}
+			}
+		}
+
+		&.edge-pag-dark-skin {
+
+			.owl-dots {
+
+				.owl-dot {
+
+					span {
+						background-color: rgba($header-dark-color, .2);
+					}
+
+					&.active,
+					&:hover {
+
+						span {
+							background-color: $header-dark-hover-color;
+						}
+					}
+				}
+			}
+		}
+
+		&.edge-pag-on-slider {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					@include edgeTransform(translateY(-50%));
+				}
+			}
+
+			.owl-dots {
+				position: absolute;
+				left: 0;
+				bottom: 20px;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+
+	.edge-alb-with-player {
+		height: 100vh;
+
+		.edge-albums-list-holder.edge-owl-slider {
+			height: 100%;
+
+			.edge-album {
+				box-sizing: border-box;
+				padding: 0 17.6%;
+
+				.edge-album-image-holder {
+
+					.edge-album-image-link {
+						> img {
+							-webkit-box-shadow: 0 0 22px 2px rgba(0,0,0,.2);
+							box-shadow: 0 0 22px 2px rgba(0,0,0,.2);
+						}
+					}
+
+					img	{
+						position: relative;
+						top: 50%;
+						@include edgeTransform(translateY(-50%));
+						@include edgeTransition(none);
+					}
+				}
+
+				&:hover {
+					.edge-album-image-holder {
+						img {
+							top: 50%;
+							@include edgeTransform(translateY(-50%));
+							@include edgeTransition(none);
+						}
+					}
+				}
+			}
+
+			.owl-stage-outer {
+				height: 100%;
+
+				.owl-stage,
+				.owl-item,
+				.edge-album,
+				.edge-album-image-holder,
+				.edge-album-image-link,
+				.edge-album-image-cover {
+					height: 100%;
+				}
+
+				.edge-album-image-holder {
+
+					.edge-album-text-holder {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						text-align: center;
+					}
+				}
+
+				.owl-item {
+					@include edgeTransitionTransform(.45s $default-easing-img);
+					@include edgeTransform(scale(0.87));
+
+					&.center {
+						@include edgeTransform(scale(1));
+					}
+
+					.edge-album-disc-image-holder {
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: -1;
+						@include edgeTransform(translate3d(0,0,0));
+						@include edgeTransition(all .6s cubic-bezier(0.84,-0.29, 0.25, 1));
+
+						.edge-album-disc-image {
+							@include edgeBorderRadius(50%);
+							@include edgeTransform(rotate(60deg) translateY(-50%));
+							transform-origin: top center;
+							@include edgeTransition(all .0s ease .6s);
+						}
+					}
+
+					&:hover,
+					&.center {
+						.edge-album-disc-image-holder {
+							@include edgeTransform(translate3d(13%,0,0));
+							@include edgeTransition(all .35s cubic-bezier(.15,.7,.54,.99));
+
+							.edge-album-disc-image {
+								@include edgeTransform(rotate(0deg) translateY(-50%));
+								transform-origin: top center;
+								@include edgeTransition(all .5s cubic-bezier(.15,.7,.54,.99));
+							}
+						}
+					}
+				}
+
+				.edge-album {
+
+					.edge-album-image-holder {
+						overflow: visible;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Slider shortcode style - end
+   ========================================================================== */

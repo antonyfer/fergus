@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.edge-image-with-text-holder {
+    @include edgeRelativeHolderLayout();
+	
+	&.edge-has-shadow {
+		
+		.edge-iwt-image {
+			box-shadow:  3px 4px 16.56px 1.44px rgba(0, 0, 0, 0.14);
+		}
+	}
+
+	&.edge-info-text-over {
+		.edge-iwt-text-holder {
+			position: absolute;
+		    display: inline-block;
+		    width: 100%;
+		    vertical-align: middle;
+		    top: 50%;
+		    left: 0;
+		    text-align: center;
+		    pointer-events:none;
+		    opacity:0;
+		    @include edgeTransform(translate3d(0,-50%,0));
+		    @include edgeTransition(all .3s ease);
+
+		    .edge-iwt-title,
+		    .edge-iwt-text {
+		    	color:#fff;
+		    }
+		}
+
+		&:hover {
+			.edge-iwt-text-holder { 
+				opacity:1;
+			}
+		}
+	}
+	
+	.edge-iwt-image {
+		@include edgeRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.edge-iwt-text-holder {
+		@include edgeRelativeHolderLayout();
+	}
+	
+	.edge-iwt-title {
+		margin: 32px 0 0;
+	}
+	
+	.edge-iwt-text {
+		margin: 14px 0 0;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.edge-image-behavior-custom-link {
+		
+		.edge-iwt-image {
+			
+			a {
+				@include edgeRelativeHolderLayout();
+				overflow: hidden;
+
+				img {
+					display: block;
+					width: 100%;
+					@include edgeTransitionTransform(.2s ease);
+				}
+
+				&:after {
+					content:'';
+					position:absolute;
+					top:0;
+					left:0;
+					height:100%;
+					width:100%;
+					opacity:0;
+					background-color: rgba($default-heading-color, 0.59);
+					@include edgeTransition(opacity .2s ease-in-out);
+				}
+
+				&:hover {
+
+					img {
+						@include edgeTransitionTransform(.45s $default-easing-img);
+						@include edgeTransform(scale(1.07));
+					}
+
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.edge-image-behavior-lightbox {
+		
+		.edge-iwt-image {
+			
+			a {
+				@include edgeImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.edge-image-behavior-zoom {
+		
+		.edge-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include edgeTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include edgeTransform(scale(1));
+				@include edgeTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.edge-image-behavior-grayscale {
+		
+		.edge-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include edgeTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

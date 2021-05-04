@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Clients Carousel shortcode style - begin
+   ========================================================================== */
+
+.edge-clients-carousel-holder {
+    @include edgeRelativeHolderLayout();
+    
+	.edge-cc-inner {
+		@include edgeRelativeHolderLayout();
+	}
+	
+	.edge-cc-item {
+		@include edgeRelativeHolderLayout();
+		
+		.touch & {
+			cursor: pointer;
+		}
+		
+		.edge-cc-item {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	/***** Hover Types - begin *****/
+	
+	&.edge-cc-hover-switch-images {
+		
+		.edge-cc-item {
+			
+			&:hover {
+				
+				.edge-cc-image {
+					opacity: 0;
+				}
+				
+				.edge-cc-hover-image {
+					opacity: 1;
+				}
+			}
+			
+			.edge-cc-image {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 auto;
+				opacity: 1;
+				@include edgeTransition(opacity .15s ease-out);
+			}
+			
+			.edge-cc-hover-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: auto;
+				opacity: 0;
+				@include edgeTransform(translateX(-50%));
+				@include edgeTransition(opacity .15s ease-out);
+			}
+		}
+	}
+	
+	&.edge-cc-hover-roll-over {
+		
+		.edge-cc-item {
+			overflow: hidden;
+			
+			&:hover {
+				
+				.edge-cc-image {
+					@include edgeTransform(translateY(100%));
+				}
+				
+				.edge-cc-hover-image {
+					@include edgeTransform(translate(-50%, 0));
+				}
+			}
+			
+			.edge-cc-image {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 auto;
+				@include edgeTransitionTransform(.4s ease);
+			}
+			
+			.edge-cc-hover-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: auto;
+				@include edgeTransform(translate(-50%, -100%));
+				@include edgeTransitionTransform(.4s ease);
+			}
+		}
+	}
+	
+	/***** Hover Types - end *****/
+}
+/* ==========================================================================
+   Clients Carousel shortcode style - end
+   ========================================================================== */

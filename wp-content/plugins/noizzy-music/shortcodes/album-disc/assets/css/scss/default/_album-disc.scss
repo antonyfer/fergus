@@ -1,0 +1,161 @@
+/*==========================================================================
+   Album disc shortcode start styles
+   ========================================================================== */
+
+.edge-album-disc {
+	display: inline-block;
+	position: relative;
+
+	%abs {
+		position: absolute;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+	}
+
+	>a {
+		@extend %abs;
+		width: 140%;
+		z-index: 100;
+
+		&:hover ~ .edge-album-disc-inner .edge-album-disc-case-holder:after {
+			opacity: 1;
+		}
+	}
+
+	.edge-album-disc-inner {
+		position: relative;
+	}
+
+	.edge-album-disc-case-holder {
+		position: relative;
+		z-index: 10;
+		
+		.edge-album-disc-case {
+			display: block;
+		}
+
+		&:after {
+			content:'';
+			@extend %abs;
+			background-color: rgba(255,255,255,.07);
+			opacity: 0;
+			@include edgeTransition(opacity .2s);
+		}
+	}
+
+	.edge-album-disc-element {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-top: 100%;
+		width: 100%;
+		@include edgeTransform(translate3d(0,0,0));
+		@include edgeTransition(all .6s cubic-bezier(0.84,-0.29, 0.25, 1));
+
+		%cd-rim {
+			content:'';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 29%;
+			width: 31%;
+			@include edgeTransform(translate(-50%,-50%));
+			border-radius: inherit;
+			z-index: 200;
+		}
+
+		.edge-album-disc-image-holder {
+			position: absolute;
+			top: 2.5%;
+			left: 0;
+			height: 95.6%;
+			width: 97.6%;
+			@include edgeBorderRadius(50%);
+			@include edgeTransform(rotate(60deg));
+			@include edgeTransition(all .0s ease .6s);
+
+			.edge-album-disc-image {
+				@extend %abs;
+				@include edgeBorderRadius(inherit);
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				.edge-album-disc-border {
+					position: absolute;
+					height: calc(100% + 3px);
+					width: calc(100% + 2px);
+					top: -3px;
+					left: -1px;
+					@include edgeBorderRadius(100%);
+					z-index: -1;
+					border: 2px solid rgba(255,255,255,.2);
+					background: #818390;
+					box-shadow: 5px 8px 16.74px 1.26px rgba(0, 0, 0, 0.1); 
+				}
+
+				&:after {
+					@extend %cd-rim;
+					border: 2px solid rgba(#333,.5);
+				}
+
+				&:before {
+					@extend %cd-rim;
+					background: rgba(255,255,255,.35);
+				}
+			}
+		}
+	}
+
+	&.edge-cd-case-shadow-on {
+
+		.edge-album-disc-inner {
+			-webkit-box-shadow: 0 0 22px 2px rgba(0,0,0,0.2);
+			box-shadow: 0 0 22px 2px rgba(0,0,0,0.2);
+		}
+	}
+
+	&.edge-animate-on-hover {
+		&:hover {
+			.edge-album-disc-element {
+				@include edgeTransform(translate3d(38%,0,0));
+				@include edgeTransition(all .35s cubic-bezier(.15,.7,.54,.99));
+			}
+
+			.edge-album-disc-image-holder {
+				@include edgeTransform(rotate(0deg));
+				@include edgeTransition(all .5s cubic-bezier(.15,.7,.54,.99));
+			}
+		}
+	}
+
+	&.edge-animate-on-appear {
+		.edge-album-disc-image-holder {
+			@include edgeTransform(rotate(180deg));
+		}
+
+		&.edge-appeared {
+			.edge-album-disc-element {
+				@include edgeTransform(translate3d(38%,0,0));
+				@include edgeTransition(all .6s cubic-bezier(.15,.7,.54,.99));
+			}
+
+			.edge-album-disc-image-holder {
+				@include edgeTransform(rotate(0deg));
+				@include edgeTransition(all .7s cubic-bezier(0, 0.45, 0.54, 0.99));
+			}
+		}
+	}
+
+	&.edge-animate-on-none {
+		.edge-album-disc-element {
+			display: none;
+		}
+	}
+}
+
+/* ==========================================================================
+  Album disc shortcode end styles
+  ==========================================================================*/

@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Album styles - begin
+   ========================================================================== */
+
+.edge-album-track-list {
+
+    .edge-album-track {
+        display: table;
+        width: 100%;
+        padding: 9px 5px;
+        font-family: $default-heading-font;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-sizing: border-box;
+
+        .edge-at-title {
+            display: table-cell;
+            width: 60%;
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
+
+        .edge-at-play-button,
+        .edge-at-video-button-holder,
+        .edge-at-download-holder,
+        .edge-at-time {
+            display: table-cell;
+            width: 4%;
+            text-align: center;
+        }
+
+        .edge-at-play-button {
+            width: 7%;
+        }
+
+        .edge-at-time {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .edge-at-video-button-holder {
+            position: relative;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .edge-at-download-holder {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .edge-at-play-button {
+            text-align: right;
+            font-size: 13px;
+            cursor: pointer;
+        }
+    }
+
+    .icon {
+        line-height: 22px;
+    }
+
+    .edge-at-pause-icon {
+        display: none;
+    }
+
+    .edge-track-playing {
+        .edge-at-play-icon {
+            display: none;
+        }
+        .edge-at-pause-icon {
+            display: inline-block;
+        }
+    }
+
+    .edge-track-paused {
+        .edge-at-play-icon {
+            display: inline-block;
+        }
+        .edge-at-pause-icon {
+            display: none;
+        }
+    }
+
+    .edge-track-playing .edge-at-title,
+    .edge-track-playing .edge-at-play-button,
+    .edge-track-playing .edge-at-time  {
+        color: $default-dark-color;
+    }
+
+    &.edge-album-light {
+        color: #fff;
+        a, 
+        .edge-at-title {
+            color: #fff;
+        }
+        a:hover {
+            color: $light-skin-color;
+        }
+        .edge-album-track {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+        .edge-track-playing .edge-at-title,
+        .edge-track-playing .edge-at-play-button,
+        .edge-track-playing .edge-at-time {
+            color: $light-skin-color;
+        }
+    }
+
+    &.edge-album-dark {
+        color: $first-main-color;
+        a,
+        .edge-at-title {
+            color: $first-main-color;
+        }
+        a:hover {
+            color: #141414;
+        }
+        .edge-album-track {
+            border-bottom-color: rgba(0, 0, 0, 0.2);
+        }
+        .edge-track-playing .edge-at-title,
+        .edge-track-playing .edge-at-play-button,
+        .edge-track-playing .edge-at-time {
+            color: #141414;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Album styles - end
+   ========================================================================== */

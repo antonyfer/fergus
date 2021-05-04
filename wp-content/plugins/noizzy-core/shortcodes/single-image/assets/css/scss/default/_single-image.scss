@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Single Image shortcode style - begin
+   ========================================================================== */
+
+.edge-single-image-holder {
+    @include edgeRelativeHolderLayout();
+
+	&.edge-has-shadow {
+
+		.edge-si-inner {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	.edge-si-inner {
+		@include edgeRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.edge-image-behavior-custom-link {
+		
+		.edge-si-inner {
+			
+			a {
+				@include edgeImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.edge-image-behavior-lightbox {
+		
+		.edge-si-inner {
+			
+			a {
+				@include edgeImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.edge-image-behavior-zoom {
+		
+		.edge-si-inner {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include edgeTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include edgeTransform(scale(1));
+				@include edgeTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.edge-image-behavior-grayscale {
+		
+		.edge-si-inner {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include edgeTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+	
+	/***** Moving Behavior Style - begin *****/
+	
+	&.edge-image-behavior-moving {
+		
+		.edge-si-inner {
+			overflow: hidden;
+			padding: 10% 0;
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-size: 120%;
+			@include edgeTransition(background .7s ease-out);
+			
+			&:hover {
+				background-position: 90% center;
+			}
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			img {
+				z-index: -1;
+				max-width: 80%;
+			}
+			
+			@include ipad-landscape {
+				padding: 0;
+				background: none;
+				
+				img {
+					z-index: inherit;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	
+	/***** Moving Behavior Style - end *****/
+
+	/***** Swith Images Style - begin *****/
+	
+	&.edge-image-behavior-switch-images {
+		
+		.edge-si-inner {
+
+			cursor: pointer;
+			
+			img:nth-child(2) {
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    opacity: 0;
+			    @include edgeTransition(opacity .15s ease-out);
+			}
+
+			img:first-child {
+				opacity: 1;
+			    @include edgeTransition(opacity .15s ease-out);
+			}
+		}
+
+		&:hover {
+			.edge-si-inner {
+				img:nth-child(2) {
+					opacity: 1;
+				}
+
+				img:first-child {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	
+	/***** Swith Images Style - end *****/
+}
+/* ==========================================================================
+   Single Image shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Video Button shortcode responsive styles - start
+   ========================================================================== */
+@include phone-landscape {
+	.edge-video-button-holder {
+		&.edge-vb-has-img {
+			
+			.edge-video-button-play,
+			.edge-video-button-play-image {
+
+				.edge-video-button-play-inner {
+				}
+			}
+		}
+		
+		.edge-video-button-play {
+			font-size: 20px;
+		}
+	}
+}
+/* ==========================================================================
+   Video Button shortcode resposive styles - end
+   ========================================================================== */

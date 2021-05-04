@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide From Image Bottom style - begin
+   ========================================================================== */
+
+.edge-portfolio-list-holder {
+	
+	&.edge-pl-gallery-slide-from-image-bottom {
+		
+		&.edge-pl-has-shadow {
+			
+			.edge-pl-item-inner {
+				box-shadow: $default-box-shadow;
+			}
+		}
+		
+		article {
+			
+			&:hover {
+				
+				.edge-pli-text-holder {
+					@include edgeTransitionTransform(.35s cubic-bezier(0.51, 1, 0.6, 1));
+					@include edgeTransform(translateY(0));
+
+					.edge-pli-text {
+						@include edgeTransitionTransform(.35s cubic-bezier(0.51, 1.78, 0.63, 1.21) .1s);
+						@include edgeTransform(translateY(0));
+					}
+				}
+			}
+			
+			.edge-pl-item-inner {
+				overflow: hidden;
+			}
+
+			.edge-pl-item-inner:hover .edge-pli-image img {
+				@include edgeTransform(none);
+			}
+		}
+		
+		.edge-pli-text-holder {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: auto;
+			bottom: 0;
+			left: 0;
+			padding: 35px 50px;
+			background-color: #fff;
+			overflow: hidden;
+			box-sizing: border-box;
+			@include edgeTransform(translateY(100%));
+			@include edgeTransitionTransform(.2s ease-out);
+
+			.edge-pli-text {
+				@include edgeTransform(translateY(40px));
+				@include edgeTransitionTransform(.2s ease-out);
+			}
+
+			.edge-pli-category{
+				color: #5b5b5b;
+			}
+
+			&.dark{
+				background-color: $default-heading-color;
+
+				.edge-pli-title,
+				.edge-pli-category,
+				.edge-pli-excerpt{
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide From Image Bottom style - end
+   ========================================================================== */

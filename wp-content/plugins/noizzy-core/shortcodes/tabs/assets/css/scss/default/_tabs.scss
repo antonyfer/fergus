@@ -1,0 +1,273 @@
+/* ==========================================================================
+   Tabs shortcode style - begin
+   ========================================================================== */
+
+.edge-tabs {
+	@include edgeRelativeHolderLayout();
+	
+	.edge-tabs-nav {
+		@include edgeRelativeHolderLayout();
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		
+		li {
+			float: left;
+			margin: 0;
+			padding: 0;
+			
+			a {
+				text-transform: uppercase;
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				box-sizing: border-box;
+				@include edgeTransition(color .2s ease-out, background-color .2s ease-out, border-color .2s ease-out);
+			}
+		}
+	}
+	
+	.edge-tab-container {
+        box-sizing: border-box;
+		@include edgeRelativeHolderLayout();
+		
+		p {
+			margin: 0;
+		}
+	}
+	
+	&.edge-tabs-standard {
+		
+		.edge-tabs-nav {
+			
+			li {
+				
+				a {
+					padding: 20px 32px;
+					color: #fff;
+					background-color: $default-dark-color;
+				}
+				
+				&.ui-state-active a,
+				&.ui-state-hover a {
+					color: $default-dark-color;
+					background-color: $first-main-color;
+				}
+			}
+		}
+		
+		.edge-tab-container {
+			margin: 25px 0 0;
+		}
+	}
+	
+	&.edge-tabs-boxed {
+		
+		.edge-tabs-nav {
+			
+			li {
+				margin: 0 12px 0 0;
+				
+				a {
+					padding: 20px 32px;
+					color: #fff;
+					background-color: $default-heading-color;
+				}
+				
+				&.ui-state-active a,
+				&.ui-state-hover a {
+					color: #fff;
+					background-color: $first-main-color;
+				}
+				
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+		
+		.edge-tab-container {
+			margin: 25px 0 0;
+		}
+	}
+	
+	&.edge-tabs-simple {
+		
+		.edge-tabs-nav {
+
+			li {
+				position: relative;
+				margin-right: 43px;
+				
+				a {
+					display: inline-block;
+					vertical-align: top;
+					padding: 2px 0;
+					font-family: $default-heading-font;
+					font-size: 18px;
+					font-weight: 700;
+					color: $default-heading-font;
+					text-transform: uppercase;
+				}
+				
+				&.ui-state-active,
+				&.ui-state-hover {
+
+					a {
+						color: $default-heading-color;
+					}
+					
+
+					&:after {
+						background-color: $first-main-color;
+					}
+				}
+				
+				&:last-child {
+					margin: 0;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 2px;
+					width: 100%;
+				}
+			}
+		}
+		
+		.edge-tab-container {
+			padding: 25px 0 27px;
+		}
+	}
+	
+	&.edge-tabs-vertical {
+		display: table;
+		
+		.edge-tabs-nav {
+			display: table-cell;
+			vertical-align: top;
+			width: 340px;
+			height: 100%;
+			box-sizing: border-box;
+			
+			li {
+				display: block;
+				float: none;
+				position: relative;
+
+				a {
+					padding: 13px 0;
+				}
+				
+				&.ui-state-active,
+				&.ui-state-hover {
+
+					a {
+						color: $default-heading-color;
+					}
+
+					&:after {
+						background-color: $first-main-color;
+					}
+				}
+
+				&:after {
+					content: '';
+				    position: absolute;
+				    right: -2px;
+				    top: 0;
+				    width: 2px;
+				    height: 100%;
+				    background-color: $default-heading-color;
+				}
+				
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+		
+		.edge-tab-container {
+			display: table-cell;
+			vertical-align: top;
+			width: calc(100% - 140px);
+			height: 100%;
+			padding: 0 0 0 45px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+.ui-widget-content {
+	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	border-radius: 0;
+
+    .ui-widget-header {
+	    font-size: inherit;
+	    line-height: inherit;
+	    font-weight: inherit;
+	    color: initial;
+	    background: none;
+	    border: 0;
+        border-radius: 0;
+    }
+	
+    .ui-tabs-nav {
+	    
+        li {
+	        position: initial;
+	        font-weight: inherit;
+	        color: inherit;
+	        background: initial;
+	        border: 0;
+	        border-radius: 0;
+        }
+    }
+
+    .ui-widget-content {
+	    color: inherit;
+	    background: none;
+	    border: 0;
+        border-radius: 0;
+    }
+}
+
+
+.edge-tabs.edge-tabs-light {
+
+	.edge-tabs-nav li a,
+	.edge-tab-container p {
+		color: #fff;
+	}
+
+	&.edge-tabs-simple .edge-tabs-nav li,
+	&.edge-tabs-vertical .edge-tabs-nav li {
+		&:after {
+			background-color: #fff;
+		}
+
+		&.ui-state-active:after,
+		&.ui-state-hover:after {
+			background-color: $first-main-color;
+		}
+	}
+
+	&.edge-tabs-simple .edge-tabs-nav li.ui-state-active a, 
+	&.edge-tabs-simple .edge-tabs-nav li.ui-state-hover a,
+	&.edge-tabs-vertical .edge-tabs-nav li.ui-state-active a, 
+	&.edge-tabs-vertical .edge-tabs-nav li.ui-state-hover a {
+		color: $first-main-color;
+	}
+
+}
+/* ==========================================================================
+   Tabs shortcode style - end
+   ========================================================================== */

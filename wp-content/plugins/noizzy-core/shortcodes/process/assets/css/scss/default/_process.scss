@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Process shortcode style - begin
+   ========================================================================== */
+
+.edge-process-holder {
+	@include edgeRelativeHolderLayout();
+	
+	$columns: ('two', 'three', 'four');
+	@for $i from 0 to length($columns) {
+		&.edge-#{nth($columns, $i+1)}-columns {
+			$column_width: 100%/($i+2);
+			
+			.edge-mark-horizontal-holder {
+				
+				.edge-process-mark {
+					width: $column_width;
+				}
+			}
+			
+			.edge-mark-vertical-holder {
+				
+				.edge-process-mark {
+					height: $column_width;
+				}
+			}
+			
+			.edge-process-item {
+				width: $column_width;
+			}
+		}
+	}
+	
+	&.edge-process-appeared {
+		
+		.edge-process-circle {
+			opacity: 1;
+			@include edgeTransform(scale(1));
+		}
+		
+		.edge-mark-horizontal-holder {
+			
+			.edge-process-line {
+				width: 100%;
+			}
+		}
+		
+		.edge-mark-vertical-holder {
+			
+			.edge-process-line {
+				height: 100%;
+			}
+		}
+		
+		.edge-process-item {
+			opacity: 1;
+		}
+	}
+	
+	.edge-mark-horizontal-holder {
+		@include edgeRelativeHolderLayout();
+		clear: both;
+		
+		.edge-process-mark {
+			float: left;
+		}
+		
+		.edge-process-line {
+			top: 50%;
+			left: 50%;
+			width: 0;
+			height: 1px;
+			@include edgeTransition(width .4s ease .1s);
+		}
+	}
+	
+	.edge-mark-vertical-holder {
+		position: absolute;
+		top: 26px;
+		left: 0;
+		display: none;
+		width: 46px;
+		height: 100%;
+		
+		.edge-process-line {
+			top: 23px;
+			left: 50%;
+			width: 1px;
+			height: 0;
+			@include edgeTransition(height .4s ease .1s);
+		}
+	}
+	
+	.edge-process-mark {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		
+		&:last-child {
+			
+			.edge-process-line {
+				display: none;
+			}
+		}
+		
+		@for $i from 2 to 5 {
+			
+			&:nth-child(#{$i}) {
+				
+				.edge-process-circle {
+					-webkit-transition-delay: #{.5 * ($i - 1)}s;
+					-moz-transition-delay: #{.5 * ($i - 1)}s;
+					transition-delay: #{.5 * ($i - 1)}s;
+				}
+				
+				.edge-process-line {
+					-webkit-transition-delay: #{.6 * ($i - 1)}s;
+					-moz-transition-delay: #{.6 * ($i - 1)}s;
+					transition-delay: #{.6 * ($i - 1)}s;
+				}
+			}
+		}
+	}
+	
+	.edge-process-circle {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 46px;
+		height: 46px;
+		font-size: 18px;
+		line-height: 46px;
+		font-weight: 700;
+		color: #fff;
+		background-color: $first-main-color;
+		border-radius: 100%;
+		opacity: 0;
+		-webkit-transition: opacity .2s ease, -webkit-transform .3s ease;
+		-moz-transition: opacity .2s ease, -moz-transform .3s ease;
+		transition: opacity .2s ease, transform .3s ease;
+		@include edgeTransform(scale(.6));
+	}
+	
+	.edge-process-line {
+		position: absolute;
+		background-color: $first-main-color;
+	}
+	
+	.edge-process-inner {
+		margin: 0 -15px;
+	}
+	
+	.edge-process-item {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		float: left;
+		padding: 0 15px;
+		opacity: 0;
+		text-align: center;
+		box-sizing: border-box;
+		@include edgeTransition(opacity .2s ease);
+		
+		@for $i from 2 to 5 {
+			
+			&:nth-child(#{$i}) {
+				-webkit-transition-delay: #{.5 * ($i - 1)}s;
+				-moz-transition-delay: #{.5 * ($i - 1)}s;
+				transition-delay: #{.5 * ($i - 1)}s;
+			}
+		}
+	}
+	
+	.edge-pi-content {
+		@include edgeRelativeHolderLayout();
+		margin: 26px 0 10px;
+	}
+	
+	.edge-pi-title {
+		margin: 0;
+	}
+	
+	.edge-pi-text {
+		margin: 11px 0 0;
+	}
+}
+/* ==========================================================================
+   Process shortcode style - end
+   ========================================================================== */
